@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --categoryItem: 240px;
+}
+
+html {
+  height: max-content;
+  min-height: 100%;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  // height: 100%;
+
+  // color: rgb(var(--foreground-rgb));
+  background: rgb(222, 226, 227);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 226, 227, 1) 0%,
+    rgb(234, 255, 249) 40%,
+    rgba(222, 226, 227, 1) 100%
+  );
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --categoryItem: 190px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    --categoryItem: 160px;
+  }
+}

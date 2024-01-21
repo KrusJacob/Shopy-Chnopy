@@ -1,0 +1,1094 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Licensed Steel Computer",
+      "price": "350",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/QkIa5tT.jpeg",
+        "https://i.imgur.com/jb5Yu0h.jpeg",
+        "https://i.imgur.com/UlxxXyG.jpeg"
+      ],
+      "rating": {
+        "totalValue": 36,
+        "value": 4,
+        "voted": 10
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
+      },
+      "discountValue": ""
+    },
+    {
+      "id": 2,
+      "title": "Awesome Wooden Mouse",
+      "price": 533,
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J ",
+      "images": [
+        "https://i.imgur.com/1twoaDy.jpeg",
+        "https://i.imgur.com/FDwQgLy.jpeg",
+        "https://i.imgur.com/kg1ZhhH.jpeg"
+      ],
+      "rating": {
+        "totalValue": 12,
+        "value": 3,
+        "voted": 4
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
+      },
+      "discountValue": 0
+    },
+    {
+      "id": 3,
+      "title": "Handmade Fresh Salad",
+      "price": 626,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/cHddUCu.jpeg",
+        "https://i.imgur.com/CFOjAgK.jpeg",
+        "https://i.imgur.com/wbIMMme.jpeg"
+      ],
+      "rating": {
+        "totalValue": 16,
+        "value": 4,
+        "voted": 4
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Rustic Bronze Gloves",
+      "price": 786,
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "images": [
+        "https://i.imgur.com/R2PN9Wq.jpeg",
+        "https://i.imgur.com/IvxMPFr.jpeg",
+        "https://i.imgur.com/7eW9nXP.jpeg"
+      ],
+      "rating": {
+        "totalValue": 6,
+        "value": 3,
+        "voted": 2
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Refined Bronze Salad",
+      "price": 350,
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "images": [
+        "https://i.imgur.com/cSytoSD.jpeg",
+        "https://i.imgur.com/WwKucXb.jpeg",
+        "https://i.imgur.com/cE2Dxh9.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Luxurious Soft Chicken",
+      "price": 368,
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/ZKGofuB.jpeg",
+        "https://i.imgur.com/GJi73H0.jpeg",
+        "https://i.imgur.com/633Fqrz.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Handcrafted Concrete Tuna",
+      "price": 705,
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/mp3rUty.jpeg",
+        "https://i.imgur.com/JQRGIc2.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Rustic Frozen Chicken",
+      "price": 149,
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "images": [
+        "https://i.imgur.com/9LFjwpI.jpeg",
+        "https://i.imgur.com/vzrTgUR.jpeg",
+        "https://i.imgur.com/p5NdI6n.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Fantastic Frozen Soap",
+      "price": 700,
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "images": [
+        "https://i.imgur.com/R3iobJA.jpeg",
+        "https://i.imgur.com/Wv2KTsf.jpeg",
+        "https://i.imgur.com/76HAxcA.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Elegant Plastic Hat",
+      "price": 832,
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "images": [
+        "https://i.imgur.com/wXuQ7bm.jpeg",
+        "https://i.imgur.com/BZrIEmb.jpeg",
+        "https://i.imgur.com/KcT6BE0.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Oriental Steel Fish",
+      "price": 215,
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "images": [
+        "https://i.imgur.com/cBuLvBi.jpeg",
+        "https://i.imgur.com/N1GkCIR.jpeg",
+        "https://i.imgur.com/kKc9A5p.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Licensed Metal Gloves",
+      "price": 127,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/KeqG6r4.jpeg",
+        "https://i.imgur.com/xGQOw3p.jpeg",
+        "https://i.imgur.com/oO5OUjb.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Recycled Frozen Pants",
+      "price": 750,
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "images": [
+        "https://i.imgur.com/UsFIvYs.jpeg",
+        "https://i.imgur.com/YIq57b6.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 14,
+      "title": "Incredible Plastic Chips",
+      "price": 994,
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "images": [
+        "https://i.imgur.com/eGOUveI.jpeg",
+        "https://i.imgur.com/UcsGO7E.jpeg",
+        "https://i.imgur.com/NLn4e7S.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Electronic Fresh Chair",
+      "price": 575,
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/axsyGpD.jpeg",
+        "https://i.imgur.com/T8oq9X2.jpeg",
+        "https://i.imgur.com/J6MinJn.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Refined Metal Hat",
+      "price": 468,
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "images": [
+        "https://i.imgur.com/Y54Bt8J.jpeg",
+        "https://i.imgur.com/SZPDSgy.jpeg",
+        "https://i.imgur.com/sJv4Xx0.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 17,
+      "title": "Fantastic Cotton Shirt",
+      "price": 814,
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "images": [
+        "https://i.imgur.com/9DqEOV5.jpeg",
+        "https://i.imgur.com/ae0AEYn.jpeg",
+        "https://i.imgur.com/mZ4rUjj.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 1,
+        "name": "Clothes",
+        "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Awesome Metal Fish",
+      "price": "460",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/ZANVnHE.jpeg",
+        "https://i.imgur.com/Ro5z6Tn.jpeg",
+        "https://i.imgur.com/woA93Li.jpeg"
+      ],
+      "rating": {
+        "value": 4,
+        "voted": 4
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": "20"
+      },
+      "discountValue": "20"
+    },
+    {
+      "id": 19,
+      "title": "Practical Metal Tuna",
+      "price": 360,
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "images": [
+        "https://i.imgur.com/yVeIeDa.jpeg",
+        "https://i.imgur.com/jByJ4ih.jpeg",
+        "https://i.imgur.com/KXj6Tpb.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Awesome Steel Sausages",
+      "price": 204,
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/SolkFEB.jpeg",
+        "https://i.imgur.com/KIGW49u.jpeg",
+        "https://i.imgur.com/mWwek7p.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Rustic Frozen Computer",
+      "price": 861,
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "images": [
+        "https://i.imgur.com/keVCVIa.jpeg",
+        "https://i.imgur.com/afHY7v2.jpeg",
+        "https://i.imgur.com/yAOihUe.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Awesome Metal Pizza",
+      "price": 237,
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "images": [
+        "https://i.imgur.com/w3Y8NwQ.jpeg",
+        "https://i.imgur.com/WJFOGIC.jpeg",
+        "https://i.imgur.com/dV4Nklf.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Rustic Plastic Tuna",
+      "price": 266,
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/OKn1KFI.jpeg",
+        "https://i.imgur.com/G4f21Ai.jpeg",
+        "https://i.imgur.com/Z9oKRVJ.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Awesome Plastic Fish",
+      "price": 762,
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "images": [
+        "https://i.imgur.com/ItHcq7o.jpeg",
+        "https://i.imgur.com/55GM3XZ.jpeg",
+        "https://i.imgur.com/tcNJxoW.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Bespoke Soft Bike",
+      "price": 420,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/YaSqa06.jpeg",
+        "https://i.imgur.com/isQAliJ.jpeg",
+        "https://i.imgur.com/5B8UQfh.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Intelligent Fresh Fish",
+      "price": 434,
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "images": [
+        "https://i.imgur.com/yb9UQKL.jpeg",
+        "https://i.imgur.com/m2owtQG.jpeg",
+        "https://i.imgur.com/bNiORct.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Small Granite Pizza",
+      "price": 834,
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "images": [
+        "https://i.imgur.com/LGk9Jn2.jpeg",
+        "https://i.imgur.com/1ttYWaI.jpeg",
+        "https://i.imgur.com/sPRWnJH.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 2,
+        "name": "Electronics",
+        "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Recycled Bronze Sausages",
+      "price": 315,
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "images": [
+        "https://i.imgur.com/Qphac99.jpeg",
+        "https://i.imgur.com/dJjpEgG.jpeg",
+        "https://i.imgur.com/MxJyADq.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
+      }
+    },
+    {
+      "id": 29,
+      "title": "Rustic Cotton Computer",
+      "price": 966,
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "images": [
+        "https://i.imgur.com/DMQHGA0.jpeg",
+        "https://i.imgur.com/qrs9QBg.jpeg",
+        "https://i.imgur.com/XVp8T1I.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Electronic Concrete Tuna",
+      "price": 304,
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "images": [
+        "https://i.imgur.com/NWIJKUj.jpeg",
+        "https://i.imgur.com/Jn1YSLk.jpeg",
+        "https://i.imgur.com/VNZRvx5.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 31,
+      "title": "Small Soft Keyboard",
+      "price": 213,
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/6wkyyIN.jpeg",
+        "https://i.imgur.com/Ald3Rec.jpeg",
+        "https://i.imgur.com/dIqo03c.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 32,
+      "title": "Bespoke Bronze Chicken",
+      "price": 640,
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "images": [
+        "https://i.imgur.com/4lTaHfF.jpeg",
+        "https://i.imgur.com/JktHE1C.jpeg",
+        "https://i.imgur.com/cQeXQMi.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 33,
+      "title": "Awesome Bronze Chair",
+      "price": 213,
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "images": [
+        "https://i.imgur.com/3oXNBst.jpeg",
+        "https://i.imgur.com/ErYYZnT.jpeg",
+        "https://i.imgur.com/boBPwYW.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 34,
+      "title": "Fantastic Wooden Pants",
+      "price": 526,
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "images": [
+        "https://i.imgur.com/3dU0m72.jpeg",
+        "https://i.imgur.com/zPU3EVa.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      }
+    },
+    {
+      "id": 35,
+      "title": "Tasty Frozen Chair",
+      "price": "900",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/qNOjJje.jpeg",
+        "https://i.imgur.com/NjfCFnu.jpeg",
+        "https://i.imgur.com/eYtvXS1.jpeg"
+      ],
+      "rating": {
+        "value": 2,
+        "voted": 1
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": "40"
+      },
+      "discountValue": "40"
+    },
+    {
+      "id": 36,
+      "title": "Sleek Plastic Pizza",
+      "price": 233,
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "images": [
+        "https://i.imgur.com/62gGzeF.jpeg",
+        "https://i.imgur.com/5MoPuFM.jpeg",
+        "https://i.imgur.com/sUVj7pK.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 37,
+      "title": "Handmade Rubber Chair",
+      "price": 838,
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "images": [
+        "https://i.imgur.com/9qrmE1b.jpeg",
+        "https://i.imgur.com/wqKxBVH.jpeg",
+        "https://i.imgur.com/sWSV6DK.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 38,
+      "title": "Oriental Plastic Gloves",
+      "price": 378,
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "images": [
+        "https://i.imgur.com/hKcMNJs.jpeg",
+        "https://i.imgur.com/NYToymX.jpeg",
+        "https://i.imgur.com/HiiapCt.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 39,
+      "title": "Ergonomic Steel Car",
+      "price": 596,
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "images": [
+        "https://i.imgur.com/mcW42Gi.jpeg",
+        "https://i.imgur.com/mhn7qsF.jpeg",
+        "https://i.imgur.com/F8vhnFJ.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 40,
+      "title": "Refined Fresh Towels",
+      "price": 151,
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "images": [
+        "https://i.imgur.com/npLfCGq.jpeg",
+        "https://i.imgur.com/vYim3gj.jpeg",
+        "https://i.imgur.com/HxuHwBO.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 41,
+      "title": "Unbranded Bronze Mouse",
+      "price": 236,
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "images": [
+        "https://i.imgur.com/HqYqLnW.jpeg",
+        "https://i.imgur.com/RlDGnZw.jpeg",
+        "https://i.imgur.com/qa0O6fg.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 42,
+      "title": "Generic Frozen Soap",
+      "price": 699,
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "images": [
+        "https://i.imgur.com/AzAY4Ed.jpeg",
+        "https://i.imgur.com/umfnS9P.jpeg",
+        "https://i.imgur.com/uFyuvLg.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 43,
+      "title": "Recycled Concrete Chair",
+      "price": 743,
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/Au8J9sX.jpeg",
+        "https://i.imgur.com/gdr8BW2.jpeg",
+        "https://i.imgur.com/KDCZxnJ.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 44,
+      "title": "Practical Rubber Bike",
+      "price": 391,
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/sC0ztOB.jpeg",
+        "https://i.imgur.com/Jf9DL9R.jpeg",
+        "https://i.imgur.com/R1IN95T.jpeg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 4,
+        "name": "Shoes",
+        "image": "https://i.imgur.com/qNOjJje.jpeg"
+      }
+    },
+    {
+      "id": 45,
+      "title": "Tasty Wooden Bacon",
+      "price": 302,
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "images": [
+        "https://i.imgur.com/BG8J0Fj.jpg",
+        "https://i.imgur.com/ujHBpCX.jpg",
+        "https://i.imgur.com/WHeVL9H.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 46,
+      "title": "Generic Frozen Salad",
+      "price": 428,
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "images": [
+        "https://i.imgur.com/Ex5x3IU.jpg",
+        "https://i.imgur.com/z7wAQwe.jpg",
+        "https://i.imgur.com/kc0Dj9S.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 47,
+      "title": "Rustic Rubber Fish",
+      "price": 553,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/xPDwUb3.jpg",
+        "https://i.imgur.com/3rfp691.jpg",
+        "https://i.imgur.com/kG05a29.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 48,
+      "title": "Gorgeous Soft Pants",
+      "price": 409,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/jVfoZnP.jpg",
+        "https://i.imgur.com/Tnl15XK.jpg",
+        "https://i.imgur.com/7OqTPO6.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 49,
+      "title": "Recycled Soft Bike",
+      "price": 493,
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "images": [
+        "https://i.imgur.com/Lqaqz59.jpg",
+        "https://i.imgur.com/uSqWK0m.jpg",
+        "https://i.imgur.com/atWACf1.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 50,
+      "title": "Electronic Plastic Fish",
+      "price": 206,
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "images": [
+        "https://i.imgur.com/0qQBkxX.jpg",
+        "https://i.imgur.com/I5g1DoE.jpg",
+        "https://i.imgur.com/myfFQBW.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    },
+    {
+      "id": 51,
+      "title": "Handcrafted Cotton Chair",
+      "price": 45,
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "images": [
+        "https://i.imgur.com/TF0pXdL.jpg",
+        "https://i.imgur.com/BLDByXP.jpg",
+        "https://i.imgur.com/b7trwCv.jpg"
+      ],
+      "rating": {
+        "voted": 0,
+        "value": 0
+      },
+      "category": {
+        "id": 5,
+        "name": "Miscellaneous",
+        "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Clothes",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Electronics",
+      "image": "https://i.imgur.com/ZANVnHE.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Furniture",
+      "image": "https://i.imgur.com/Qphac99.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Shoes",
+      "image": "https://i.imgur.com/qNOjJje.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Miscellaneous",
+      "image": "https://i.imgur.com/BG8J0Fj.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "Krus@mail.ru",
+      "password": "8888",
+      "productsInCart": [],
+      "id": 1
+    },
+    {
+      "email": "coneter@mail.ru",
+      "password": "1234",
+      "productsInCart": [],
+      "id": 2
+    }
+  ]
+}
