@@ -76,7 +76,7 @@ const ProductItem: FC<IProductItemProps> = ({ product, checked, status, quantity
         <img
           onClick={goToPageProduct}
           src={product.images[0]}
-          className="lg:w-[220px] lg:h-[220px] w-[190px] h-[190px] cursor-pointer"
+          className="lg:w-[220px] lg:h-[220px] w-[190px] h-[190px] cursor-pointer hover:scale-[1.03] duration-300"
           alt={product.title}
         />
         {isEditor ? (

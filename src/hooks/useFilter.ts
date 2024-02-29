@@ -1,4 +1,3 @@
-"use string";
 import { useSortStore } from "@/store/sorting/storeSort";
 import { IProduct } from "@/types/product.type";
 
@@ -11,7 +10,7 @@ export const useFilter = (products: IProduct[]) => {
   const getFilteredProducts = () => {
     //temp
     let filteredProducts = [];
-    filteredProducts = products.filter((product) => product.title.toLowerCase().includes(temp.toLowerCase()));
+    filteredProducts = temp ? products.filter((product) => RegExp(temp, "i").test(product.title)) : products;
 
     // sort
     if (sort === "min" || sort === "max") {

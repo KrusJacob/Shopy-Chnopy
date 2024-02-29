@@ -25,14 +25,16 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
 
   const onSaveChangesProduct: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    const { discountValue, ...preparedProductValues } = productValue;
     const chandedProduct = {
-      ...productValue,
+      ...preparedProductValues,
       id: product.id,
       category: product.category,
       images: product.images,
       rating: product.rating,
       discount: { value: productValue.discountValue || 0 },
     };
+    console.log(chandedProduct);
     mutation.mutate(chandedProduct);
   };
   const queryClient = useQueryClient();

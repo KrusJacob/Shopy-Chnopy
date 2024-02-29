@@ -1,13 +1,13 @@
 "use client";
 import { productApi } from "@/services/product/productApi";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ArrowLeft, ShoppingBasket, ShoppingBag, CheckCircle, Star } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,7 +21,7 @@ import { useSession } from "next-auth/react";
 import { useToast } from "@/hooks/useToast";
 import { navPaths } from "@/services/navPaths";
 import Rating from "@/components/screens/product/Rating";
-import { IProduct } from "@/types/product.type";
+import FeedBackProductForm from "@/components/screens/product/FeedBackProductForm";
 
 const ProductSinglePage = ({ id }: { id: string }) => {
   const [isFeedback, setIsFeedback] = useState<boolean>(false);
@@ -114,77 +114,4 @@ const ProductSinglePage = ({ id }: { id: string }) => {
   );
 };
 
-const FeedBackProductForm = ({
-  setIsFeedback,
-  product,
-}: {
-  setIsFeedback: React.Dispatch<React.SetStateAction<boolean>>;
-  product: IProduct;
-}) => {
-  const [feedBackTitle, setFeedBackTitle] = useState("");
-  const [isVoted, setIsVoted] = useState(false);
-
-  const starStyles = {
-    strokeWidth: 1,
-    size: 36,
-  };
-
-  const stars = ["bad", "not very", "acceptable", "good", "excellent"];
-
-  const onSubmitVote = () => {
-    const ratingValue = stars.findIndex((star) => star === feedBackTitle) + 1;
-    const ratingTotalValue = product.rating.totalValue + ratingValue;
-
-    const chandedProduct = {
-      ...product,
-      rating: {
-        totalValue: ratingTotalValue,
-        value: Math.floor(ratingTotalValue / (product.rating.voted + 1)),
-        voted: product.rating.voted + 1,
-      },
-    };
-    mutation.mutate(chandedProduct);
-    useToast.voteRateProduct(product.title, ratingValue);
-  };
-
-  const queryClient = useQueryClient();
-
-  const mutation = useMutation({
-    mutationKey: ["product", `productId:${product.id}`],
-    mutationFn: (product: IProduct) => productApi.changeProduct(product),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["product", `productId:${product.id}`] });
-      setIsFeedback(false);
-    },
-  });
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -60 }}
-      className="mt-14 border py-2 px-2 w-min rounded border-grayDark "
-    >
-      <div className="flex gap-2 text-lg">
-        <h5>You feedback:</h5>
-        <p>{feedBackTitle}</p>
-      </div>
-      <div className="flex gap-1 mt-2 px-8">
-        {stars.map((item, i) => (
-          <Star
-            key={item}
-            {...starStyles}
-            className="duration-200 cursor-pointer"
-            fill={i > stars.findIndex((star) => star === feedBackTitle) ? "beige" : "gold"}
-            onMouseEnter={() => setFeedBackTitle(item)}
-            onClick={() => setIsVoted(true)}
-          />
-        ))}
-      </div>
-      <Button onClick={onSubmitVote} disabled={!isVoted} className="mt-8 mx-auto disabled:opacity-60">
-        Submit
-      </Button>
-    </motion.div>
-  );
-};
 export default ProductSinglePage;

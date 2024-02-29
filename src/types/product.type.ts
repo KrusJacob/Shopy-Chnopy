@@ -1,5 +1,3 @@
-import { type } from "os";
-
 export interface IProduct {
   id: number;
   title: string;
@@ -24,7 +22,6 @@ interface IRating {
 export type IProductStatus = "Default" | "InCart" | "InAdmin";
 
 export type InCart = {
-  selected?: boolean;
   quantity?: number;
   id: number;
 };

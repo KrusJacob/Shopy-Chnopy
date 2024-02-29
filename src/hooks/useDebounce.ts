@@ -1,4 +1,3 @@
-"use string";
 import { useEffect, useState } from "react";
 
 const useDebounce = <T>(str: T, delay = 400) => {

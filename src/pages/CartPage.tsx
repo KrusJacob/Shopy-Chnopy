@@ -8,7 +8,7 @@ import { useCartStore } from "@/store/cart/StoreCart";
 import { InCart, IProduct } from "@/types/product.type";
 import { useQuery } from "@tanstack/react-query";
 import { Wallet2 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const CartPage = () => {
   const productsId = useCartStore((state) => state.productsId);

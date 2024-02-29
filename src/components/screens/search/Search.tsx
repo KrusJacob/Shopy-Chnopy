@@ -17,7 +17,7 @@ const Search = () => {
       <input
         value={temp}
         onChange={(e) => setTemp(e.target.value)}
-        type="text"
+        type="search"
         placeholder="search product"
         className="w-full px-4 py-2 text-xl"
       />
