@@ -18,7 +18,7 @@ const CategoryItem = (props: ICategoryItemProps) => {
       transition={{ duration: 1, delay: category.id * 0.2 }}
       key={category.id}
       onClick={() => changeCategory(category.id.toString())}
-      className={`group relative text-white text-2xl border-4 ${
+      className={`group relative text-white md:text-2xl text-sm border-4 ${
         currentCategory === category.id.toString() ? "border-greenDark" : "border-white"
       } brightness-90 hover:brightness-110 duration-200 cursor-pointer rounded-md overflow-hidden`}
     >

@@ -1,4 +1,4 @@
-import ProductSinglePage from "@/pages/ProductSinglePage";
+import ProductSinglePage from "@/components/pages/ProductSinglePage";
 import { productApi } from "@/services/product/productApi";
 import { Metadata } from "next";
 

@@ -1,8 +1,6 @@
-import AdminPage from "@/pages/AdminPage";
+import AdminPage from "@/components/pages/AdminPage";
 import { Metadata } from "next";
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
-import React, { useLayoutEffect } from "react";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Admin | Shopy Chnopy",

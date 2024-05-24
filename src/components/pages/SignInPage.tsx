@@ -1,9 +1,7 @@
 "use client";
-import RegitrationForm from "@/components/screens/login/registration/RegitrationForm";
-import SigninForm from "@/components/screens/login/signin/SigninForm";
+import RegitrationForm from "@/components/entities/login/registration/RegitrationForm";
+import SigninForm from "@/components/entities/login/signin/SigninForm";
 import Button from "@/components/UI/button/Button";
-import { useSession } from "next-auth/react";
-import Link from "next/link";
 
 import React, { useState } from "react";
 

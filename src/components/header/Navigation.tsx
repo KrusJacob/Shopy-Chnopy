@@ -17,6 +17,14 @@ const navItems = [
   { label: "Admin", path: navPaths.ADMIN, disabled: true },
 ];
 
+const navSigninLink = { label: "Signin", path: navPaths.SIGNIN, disabled: false };
+const navLogoutLink = {
+  label: "Logout",
+  path: navPaths.CATALOG,
+  disabled: false,
+  callback: () => signOut().then((a) => useToast.logOff()),
+};
+
 const Navigation = () => {
   const session = useSession();
 
@@ -28,7 +36,7 @@ const Navigation = () => {
 
   return (
     <div className={styles.navigation}>
-      <HamburgerMenu navItems={navItems} />
+      <HamburgerMenu navItems={[...navItems, session.data ? navLogoutLink : navSigninLink]} />
 
       <div className="md:flex hidden gap-8">
         <Logo />
@@ -44,7 +52,7 @@ const Navigation = () => {
         </nav>
       </div>
 
-      <div className="flex items-center gap-8 ml-auto">
+      <div className="items-center gap-8 ml-auto md:flex hidden">
         {session.data ? (
           <Link
             className={styles.underline}
@@ -56,12 +64,12 @@ const Navigation = () => {
           </Link>
         ) : (
           <Link className={styles.underline} href={navPaths.SIGNIN}>
-            <span> Signin</span>
+            <span>Signin</span>
             <LogIn />
           </Link>
         )}
-        <Cart />
       </div>
+      <Cart />
     </div>
   );
 };

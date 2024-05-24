@@ -8,6 +8,7 @@ type NavigationProps = {
   label: string;
   path: string;
   disabled: boolean;
+  callback?: () => void;
 };
 
 const HamburgerMenu = ({ navItems }: { navItems: NavigationProps[] }) => {
@@ -26,7 +27,15 @@ const HamburgerMenu = ({ navItems }: { navItems: NavigationProps[] }) => {
             {navItems.map((item) => {
               if (!item.disabled)
                 return (
-                  <Link onClick={() => setIsOpen(!isOpen)} className="text-3xl" key={item.label} href={item.path}>
+                  <Link
+                    onClick={() => {
+                      setIsOpen(!isOpen);
+                      item.callback && item.callback();
+                    }}
+                    className="text-3xl"
+                    key={item.label}
+                    href={item.path}
+                  >
                     {item.label}
                   </Link>
                 );

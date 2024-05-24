@@ -2,13 +2,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { IProduct } from "@/types/product.type";
 import React from "react";
-import ProductItem from "./ProductItem";
-import Image from "next/image";
+import ProductItem from "./productItem/ProductItem";
+
 import { productApi } from "@/services/product/productApi";
 import { useCategoryStore } from "@/store/category/storeCategory";
 import Loader from "@/components/UI/loader/Loader";
 import { useFilter } from "@/hooks/useFilter";
-import { useCartStore } from "@/store/cart/StoreCart";
 
 const ProductList = () => {
   const category = useCategoryStore((state) => state.category);
@@ -35,7 +34,7 @@ const ProductList = () => {
         <>
           <div className="flex flex-wrap border-l border-r border-grayDark mt-2 px-2">
             {filteredProducts.map((product: IProduct) => {
-              return <ProductItem key={product.id} product={product} status="Default" />;
+              return <ProductItem key={product.id} product={product} type="Default" />;
             })}
           </div>
         </>

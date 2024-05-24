@@ -1,6 +1,6 @@
-import Filter from "@/components/screens/filter/Filter";
-import Search from "@/components/screens/search/Search";
-import Sorting from "@/components/screens/sorting/Sorting";
+import Filter from "@/components/entities/filter/Filter";
+import Search from "@/components/entities/search/Search";
+import Sorting from "@/components/entities/sorting/Sorting";
 import React from "react";
 
 const SideBar = () => {

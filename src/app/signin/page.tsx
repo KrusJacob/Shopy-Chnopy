@@ -1,6 +1,4 @@
-import RegitrationForm from "@/components/screens/login/registration/RegitrationForm";
-import Button from "@/components/UI/button/Button";
-import SignInPage from "@/pages/SignInPage";
+import SignInPage from "@/components/pages/SignInPage";
 import { Metadata } from "next";
 import React from "react";
 

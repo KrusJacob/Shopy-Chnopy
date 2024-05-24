@@ -4,7 +4,6 @@ import { categoryApi } from "@/services/category/categoryApi";
 import { useCategoryStore } from "@/store/category/storeCategory";
 import { ICategory } from "@/types/product.type";
 import { useQuery } from "@tanstack/react-query";
-import Image from "next/image";
 import React from "react";
 
 import CategoryItem from "./CategoryItem";
@@ -19,9 +18,9 @@ const CategoriesList = () => {
   });
 
   return (
-    <div className="flex flex-wrap gap-4 justify-start ">
+    <div className="flex flex-wrap md:gap-4 gap-2 justify-start ">
       <div
-        className={`w-[var(--categoryItem)] h-[var(--categoryItem)] box-content bg-redLight border- border-4 border-white flex justify-center items-center text-3xl text-white rounded-md`}
+        className={`w-[var(--categoryItem)] h-[var(--categoryItem)] box-content bg-redLight border- border-4 border-white flex justify-center items-center md:text-3xl text-lg text-white rounded-md`}
       >
         Categories
       </div>

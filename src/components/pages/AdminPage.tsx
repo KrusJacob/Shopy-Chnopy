@@ -1,21 +1,20 @@
 "use client";
-import ProductItem from "@/components/screens/product/ProductItem";
+import ProductItem from "@/components/entities/product/productItem/ProductItem";
 import { productApi } from "@/services/product/productApi";
 import { useCategoryStore } from "@/store/category/storeCategory";
 import { ICategory, IProduct } from "@/types/product.type";
 import { useQuery } from "@tanstack/react-query";
 import React, { useEffect } from "react";
-import Search from "@/components/screens/search/Search";
+import Search from "@/components/entities/search/Search";
 import { useFilter } from "@/hooks/useFilter";
 import { categoryApi } from "@/services/category/categoryApi";
 import Button from "@/components/UI/button/Button";
 import Loader from "@/components/UI/loader/Loader";
 import { useSession } from "next-auth/react";
-import { redirect, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const AdminPage = () => {
   const session = useSession();
-  const router = useRouter();
   const category = useCategoryStore((state) => state.category);
   const changeCategory = useCategoryStore((state) => state.changeCategory);
 
@@ -47,13 +46,12 @@ const AdminPage = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-2">
       {session.data?.user && (
         <>
-          <div>
-            <Search />
-          </div>
-          <div className="flex gap-2 my-4">
+          <Search />
+
+          <div className="flex gap-2 my-4 overflow-x-auto">
             {categories.map((item: ICategory) => (
               <Button
                 key={item.id}
@@ -67,9 +65,9 @@ const AdminPage = () => {
           {isLoading && <Loader />}
           {isFetched && (
             <>
-              <div className="flex flex-wrap border-l border-grayDark mt-2 pl-2">
+              <div className="flex flex-wrap border-l border-grayDark mt-2 pl-2 ">
                 {filteredProducts.map((product: IProduct) => (
-                  <ProductItem key={product.id} product={product} status="InAdmin" />
+                  <ProductItem key={product.id} product={product} type="InAdmin" />
                 ))}
               </div>
             </>

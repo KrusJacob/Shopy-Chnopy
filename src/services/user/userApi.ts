@@ -1,4 +1,4 @@
-import { InCart, IProduct } from "@/types/product.type";
+import { InCart } from "@/types/product.type";
 import { IUser } from "@/types/user.types";
 
 const URL = "http://localhost:3001/users";

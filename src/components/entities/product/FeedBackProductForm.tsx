@@ -55,8 +55,8 @@ const FeedBackProductForm: FC<FeedBackProductFormProps> = ({ setIsFeedback, prod
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -60 }}
-      className="mt-14 border py-2 px-2 w-min rounded border-grayDark "
+      exit={{ opacity: 0, y: -50 }}
+      className="mt-14 border py-2 px-2 w-min rounded bg-slate-50 border-grayDark "
     >
       <div className="flex gap-2 text-lg">
         <h5>You feedback:</h5>

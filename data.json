@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Licensed Steel Computer",
-      "price": "350",
+      "price": 350,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
       "images": [
         "https://i.imgur.com/QkIa5tT.jpeg",
@@ -11,9 +11,9 @@
         "https://i.imgur.com/UlxxXyG.jpeg"
       ],
       "rating": {
-        "totalValue": 39,
+        "totalValue": 43,
         "value": 3,
-        "voted": 11
+        "voted": 12
       },
       "category": {
         "id": 1,
@@ -21,7 +21,7 @@
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
       },
       "discount": {
-        "value": 0
+        "value": "0"
       }
     },
     {
@@ -67,6 +67,9 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": "50"
       }
     },
     {
@@ -89,7 +92,6 @@
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
       },
-
       "discount": {
         "value": "20"
       }
@@ -114,7 +116,6 @@
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
       },
-
       "discount": {
         "value": "10"
       }
@@ -362,7 +363,7 @@
     {
       "id": 18,
       "title": "Awesome Metal Fish",
-      "price": "460",
+      "price": 460,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
       "images": [
         "https://i.imgur.com/ZANVnHE.jpeg",
@@ -379,7 +380,7 @@
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
       },
       "discount": {
-        "value": "20"
+        "value": "25"
       }
     },
     {
@@ -704,7 +705,7 @@
     {
       "id": 35,
       "title": "Tasty Frozen Chair",
-      "price": "900",
+      "price": 900,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
       "images": [
         "https://i.imgur.com/qNOjJje.jpeg",
@@ -721,7 +722,7 @@
         "image": "https://i.imgur.com/qNOjJje.jpeg"
       },
       "discount": {
-        "value": "40"
+        "value": "14"
       }
     },
     {
@@ -1078,7 +1079,15 @@
       "password": "8888",
       "productsInCart": [
         {
-          "id": 5,
+          "id": 1,
+          "selected": true
+        },
+        {
+          "id": 18,
+          "selected": true
+        },
+        {
+          "id": 3,
           "selected": true
         }
       ],

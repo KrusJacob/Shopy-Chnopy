@@ -3,7 +3,6 @@ import Button from "@/components/UI/button/Button";
 import { navPaths } from "@/services/navPaths";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -27,7 +26,7 @@ const HomePage = () => {
           initial={{ opacity: 0, x: 400 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, type: "spring" }}
-          className="lg:text-8xl text-5xl font-bold"
+          className="lg:text-8xl sm:text-5xl text-3xl font-bold"
         >
           Shopy <span className="text-white px-4 py-2 rounded-lg bg-redLight">Chnopy</span>
         </motion.h1>
@@ -35,13 +34,13 @@ const HomePage = () => {
           initial={{ opacity: 0, x: 400 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, type: "spring", delay: 0.5 }}
-          className="lg:text-4xl text-3xl mt-8 border-b-2 py-1 border-black inline-block"
+          className="lg:text-4xl sm:text-3xl text-xl sm:mt-8 mt-4 border-b-2 py-1 border-black inline-block"
         >
           Best Online shop
         </motion.p>
       </div>
-      <div className="mt-8 ml-auto lg:w-1/2 w-3/5">
-        <ul className="lg:text-4xl text-3xl list-disc grid gap-2 ">
+      <div className="mt-8 ml-auto lg:w-1/2 sm:w-3/5 w-4/5">
+        <ul className="lg:text-4xl sm:text-3xl text-xl list-disc grid gap-1 ">
           {listItem.map((item, i) => (
             <motion.li
               key={i}
@@ -57,7 +56,7 @@ const HomePage = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.5 }}
-          className="lg:text-2xl text-xl mt-8"
+          className="lg:text-2xl sm:text-xl text-md mt-8"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur praesentium repudiandae ex, Earum, nam
           expedita!
@@ -68,7 +67,7 @@ const HomePage = () => {
           transition={{ delay: 2.8, duration: 0.5 }}
         >
           <Link href={navPaths.CATALOG}>
-            <Button className="mt-8 text-2xl" Icon={MoveRight} sizeIcon={34}>
+            <Button className="mt-8 sm:text-xl flex items-center text-md" Icon={MoveRight} sizeIcon={30}>
               Go to Catalog
             </Button>
           </Link>

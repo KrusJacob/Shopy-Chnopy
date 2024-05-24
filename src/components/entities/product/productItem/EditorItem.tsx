@@ -15,7 +15,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
   const [productValue, setProductValue] = useState({
     title: product.title,
     description: product.description,
-    price: product.price,
+    price: +product.price,
     discountValue: product.discount?.value,
   });
 
@@ -34,7 +34,6 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
       rating: product.rating,
       discount: { value: productValue.discountValue || 0 },
     };
-    console.log(chandedProduct);
     mutation.mutate(chandedProduct);
   };
   const queryClient = useQueryClient();
@@ -51,8 +50,8 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
 
   return (
     <>
-      <form onSubmit={(e) => onSaveChangesProduct(e)} className="text-xl grid grid-cols-[140px_1fr]">
-        <span>Title: </span>
+      <form onSubmit={(e) => onSaveChangesProduct(e)} className="text-lg  flex flex-col  w-full">
+        <label htmlFor="title">Title: </label>
         <div>
           <Input
             onChange={changeProductValue}
@@ -63,16 +62,16 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
             value={productValue.title}
           />
         </div>
-        <span>Description: </span>
+        <label htmlFor="description">Description: </label>
         <div className="flex">
           <textarea
             onChange={changeProductValue}
             name="description"
             value={productValue.description}
-            className="resize-none h-[110px] w-[540px] px-2 py-1 border"
+            className="resize-none h-[110px] w-full px-2 py-1 border"
           ></textarea>
         </div>
-        <span>Price: </span>
+        <label htmlFor="price">Price: </label>
         <div>
           <Input
             onChange={changeProductValue}
@@ -84,7 +83,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           />
           {"$"}
         </div>
-        <span>Discount: </span>
+        <label htmlFor="discountValue">Discount: </label>
         <div>
           <Input
             onChange={changeProductValue}
@@ -96,7 +95,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           />
           {"%"}
         </div>
-        <Button className="mt-6">Save</Button>
+        <Button className="mt-6 md:max-w-[250px]">Save</Button>
       </form>
     </>
   );

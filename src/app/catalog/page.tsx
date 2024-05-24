@@ -1,4 +1,4 @@
-import CatalogPage from "@/pages/CatalogPage";
+import CatalogPage from "@/components/pages/CatalogPage";
 import { Metadata } from "next";
 import React, { useState } from "react";
 
