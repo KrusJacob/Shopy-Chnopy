@@ -28,26 +28,33 @@ const PaymentModal = ({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[500px] w-[500px] border-2 border-redLight bg-cyan-100 p-8 relative flex flex-col justify-center rounded "
+        className="max-w-[500px] w-[500px] mx-1 border-2 border-redLight bg-cyan-100 md:p-8 p-2 relative flex flex-col justify-center rounded "
       >
         <div className="my-5">
-          <div className="text-xl my-2">
+          <div className="md:text-lg sm:text-base text-sm my-2">
             {products.map((item) => (
-              <div className="border-dotted border-black border-b" key={item.id}>
+              <div
+                className="border-dotted border-black border-b"
+                key={item.id}
+              >
                 <div className="flex justify-between">
                   <p>
                     {item.title} x {item.quantity || 1}
                   </p>
-                  <p>+ {item.price * (item.quantity || 1)} $</p>
+                  <p className="min-w-max">
+                    + {item.price * (item.quantity || 1)} $
+                  </p>
                 </div>
                 {item.discount && item.discount.value > 0 && (
-                  <div>
-                    <div className="flex justify-between">
-                      <p>discount:</p>
-                      <p>
-                        - {` ${getDifferencePrice(item.price, item.discount.value)} $ (${item.discount.value}%)`}
-                      </p>
-                    </div>
+                  <div className="flex justify-between">
+                    <p>{`discount (${item.discount.value}%)`}</p>
+                    <p className="min-w-max">
+                      -{" "}
+                      {` ${getDifferencePrice(
+                        item.price,
+                        item.discount.value
+                      )} $`}
+                    </p>
                   </div>
                 )}
               </div>
@@ -61,11 +68,19 @@ const PaymentModal = ({
           </div>
         </div>
 
-        <Button Icon={Wallet2} onClick={onCloseModal} className="text-xl disabled:opacity-50">
+        <Button
+          Icon={Wallet2}
+          onClick={onCloseModal}
+          className="text-xl disabled:opacity-50"
+        >
           Buy
         </Button>
 
-        <XSquare className="absolute top-0 right-0 cursor-pointer" size={30} onClick={onCloseModal} />
+        <XSquare
+          className="absolute top-0 right-0 cursor-pointer"
+          size={30}
+          onClick={onCloseModal}
+        />
       </div>
     </div>
   );

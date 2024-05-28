@@ -19,8 +19,13 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
     discountValue: product.discount?.value,
   });
 
-  const changeProductValue: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
-    setProductValue((productValue) => ({ ...productValue, [e.target.name]: e.target.value }));
+  const changeProductValue: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (e) => {
+    setProductValue((productValue) => ({
+      ...productValue,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const onSaveChangesProduct: React.FormEventHandler<HTMLFormElement> = (e) => {
@@ -42,7 +47,9 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
     mutationKey: ["products", `categoryID:${product.category.id}`, product.id],
     mutationFn: (product: IProduct) => productApi.changeProduct(product),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["products", `categoryID:${product.category.id}`] });
+      queryClient.invalidateQueries({
+        queryKey: ["products", `categoryID:${product.category.id}`],
+      });
       setIsEditor(false);
       useToast.productChanged();
     },
@@ -50,9 +57,12 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
 
   return (
     <>
-      <form onSubmit={(e) => onSaveChangesProduct(e)} className="text-lg  flex flex-col  w-full">
-        <label htmlFor="title">Title: </label>
+      <form
+        onSubmit={(e) => onSaveChangesProduct(e)}
+        className="text-base  flex flex-col  w-full"
+      >
         <div>
+          <label htmlFor="title">Title: </label>
           <Input
             onChange={changeProductValue}
             name="title"
@@ -62,39 +72,44 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
             value={productValue.title}
           />
         </div>
-        <label htmlFor="description">Description: </label>
-        <div className="flex">
+        <div>
+          <label htmlFor="description">Description: </label>
           <textarea
             onChange={changeProductValue}
             name="description"
             value={productValue.description}
             className="resize-none h-[110px] w-full px-2 py-1 border"
-          ></textarea>
-        </div>
-        <label htmlFor="price">Price: </label>
-        <div>
-          <Input
-            onChange={changeProductValue}
-            name="price"
-            required
-            type="number"
-            min={1}
-            value={productValue.price}
           />
-          {"$"}
         </div>
-        <label htmlFor="discountValue">Discount: </label>
-        <div>
-          <Input
-            onChange={changeProductValue}
-            name="discountValue"
-            type="number"
-            max={90}
-            min={0}
-            value={productValue.discountValue}
-          />
-          {"%"}
+        <div className="flex gap-6">
+          <div>
+            <label htmlFor="price">Price: </label>
+            <Input
+              onChange={changeProductValue}
+              name="price"
+              required
+              type="number"
+              min={1}
+              max={9999}
+              value={productValue.price}
+            />
+            {"$"}
+          </div>
+          <div>
+            <label htmlFor="discountValue">Discount: </label>
+            <Input
+              onChange={changeProductValue}
+              name="discountValue"
+              type="number"
+              max={90}
+              min={0}
+              value={productValue.discountValue}
+            />
+
+            {"%"}
+          </div>
         </div>
+
         <Button className="mt-6 md:max-w-[250px]">Save</Button>
       </form>
     </>

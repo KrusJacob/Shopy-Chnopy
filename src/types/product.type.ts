@@ -4,7 +4,7 @@ export interface IProduct {
   price: number;
   description: string;
   images: string[];
-  category: ICategoryProduct;
+  category: ICategory;
   rating: IRating;
   discount?: IDiscount;
 }
@@ -19,7 +19,14 @@ interface IRating {
   value: number;
 }
 
+export interface ICategory {
+  id: number;
+  name: string;
+  image: string;
+}
+
 export type IProductType = "Default" | "InCart" | "InAdmin";
+export type ISortingFilter = "popular" | "rating" | "min" | "max";
 
 export type InCart = {
   selected?: boolean;
@@ -28,15 +35,3 @@ export type InCart = {
 };
 
 export type IProductsInCart = IProduct & InCart;
-
-export interface ICategoryProduct {
-  id: number;
-  name: string;
-  image: string;
-}
-
-export interface ICategory {
-  id: number;
-  name: string;
-  image: string;
-}

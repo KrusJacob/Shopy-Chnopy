@@ -1,7 +1,7 @@
 import { IProduct } from "@/types/product.type";
+import { BASE_URL } from "..";
 
-// const URL = "https://api.escuelajs.co/api/v1/products";
-const URL = "http://localhost:3001/products";
+const URL = `${BASE_URL}/products`;
 
 export const productApi = {
   fetchProducts: async (categoryId: string): Promise<IProduct[]> => {

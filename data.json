@@ -2,9 +2,9 @@
   "products": [
     {
       "id": 1,
-      "title": "Licensed Steel Computer",
-      "price": 350,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "T-shirt Dark Cityscape",
+      "price": 90,
+      "description": "The t-shirt is made of high-quality material, providing comfort and ease of wear. A great choice for those who appreciate original items and love mountain landscapes.",
       "images": [
         "https://i.imgur.com/QkIa5tT.jpeg",
         "https://i.imgur.com/jb5Yu0h.jpeg",
@@ -26,9 +26,9 @@
     },
     {
       "id": 2,
-      "title": "Awesome Wooden Mouse",
-      "price": 533,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J ",
+      "title": "Scarlet Cozy Hoodie",
+      "price": 235,
+      "description": "The \"Scarlet Cozy Hoodie\" is a vibrant red pullover hoodie that is perfect for staying warm and stylish on chilly days. Made from soft, premium materials, this hoodie features a comfortable fit with a cozy hood and kangaroo pocket. The bold scarlet color adds a pop of color to any outfit, making it a standout piece in your wardrobe. Whether you're heading out for a casual day or lounging at home, this hoodie will keep you looking and feeling great.",
       "images": [
         "https://i.imgur.com/1twoaDy.jpeg",
         "https://i.imgur.com/FDwQgLy.jpeg",
@@ -50,9 +50,9 @@
     },
     {
       "id": 3,
-      "title": "Handmade Fresh Salad",
-      "price": 626,
-      "description": "The Football Is Good For Training And Recreational Purposes",
+      "title": "Snowy White Comfort Crewneck",
+      "price": "210",
+      "description": "The \"Snowy White Comfort Crewneck\" is a versatile and classic white sweatshirt that exudes comfort and style. Crafted from premium soft, breathable fabric, this crewneck sweatshirt offers a relaxed fit that is perfect for everyday wear. The snowy white hue pairs effortlessly with any outfit, adding a touch of freshness to your look. Whether you're running errands, working from home, or simply lounging, the \"Snowy White Comfort Crewneck\" will keep you looking and feeling effortlessly cool.",
       "images": [
         "https://i.imgur.com/cHddUCu.jpeg",
         "https://i.imgur.com/CFOjAgK.jpeg",
@@ -74,9 +74,9 @@
     },
     {
       "id": 4,
-      "title": "Rustic Bronze Gloves",
-      "price": 786,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "title": "Slate Gray Lounge Sweatshirt",
+      "price": "286",
+      "description": "The \"Slate Gray Lounge Sweatshirt\" is a stylish and comfortable addition to your wardrobe. This sweatshirt is crafted from a soft and cozy fabric that is perfect for lounging at home or running errands in style. With ribbed cuffs and a relaxed fit, this sweatshirt offers a versatile option for casual wear. Whether you're relaxing on the couch or meeting friends for a coffee, the \"Slate Gray Lounge Sweatshirt\" will keep you cozy and chic.",
       "images": [
         "https://i.imgur.com/R2PN9Wq.jpeg",
         "https://i.imgur.com/IvxMPFr.jpeg",
@@ -98,9 +98,9 @@
     },
     {
       "id": 5,
-      "title": "Refined Bronze Salad",
+      "title": "Midnight Classic Hoodie",
       "price": 350,
-      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "description": "The \"Midnight Classic Hoodie\" is a timeless and versatile piece that every wardrobe needs. This hoodie is crafted from high-quality black fabric that is both comfortable and durable. The classic design features a hood with drawstrings and a kangaroo pocket, perfect for keeping your hands warm or storing small essentials. Whether you're heading out for a casual day or simply lounging at home, the \"Midnight Classic Hoodie\" offers both style and comfort. Stay cozy and chic with this essential wardrobe staple.",
       "images": [
         "https://i.imgur.com/cSytoSD.jpeg",
         "https://i.imgur.com/WwKucXb.jpeg",
@@ -122,47 +122,56 @@
     },
     {
       "id": 6,
-      "title": "Luxurious Soft Chicken",
-      "price": 368,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "PowerFlex Women's Athletic Pants",
+      "price": "128",
+      "description": "The \"Relaxed Fit Women's Sporty Joggers\" are the ultimate combination of comfort and style for your active lifestyle. The sporty design includes an elastic waistband with drawstrings for a customized fit, as well as side pockets for convenience. Whether you're hitting the gym, going for a run, or just relaxing on the weekends, the \"Relaxed Fit Women's Sporty Joggers\" will be your go-to choice for easy, chic athleisure wear.",
       "images": [
         "https://i.imgur.com/ZKGofuB.jpeg",
         "https://i.imgur.com/GJi73H0.jpeg",
         "https://i.imgur.com/633Fqrz.jpeg"
       ],
       "rating": {
-        "totalValue": 0,
-        "value": 0,
-        "voted": 0
+        "totalValue": 4,
+        "value": 4,
+        "voted": 1
       },
       "category": {
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 7,
-      "title": "Handcrafted Concrete Tuna",
-      "price": 705,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "images": ["https://i.imgur.com/mp3rUty.jpeg", "https://i.imgur.com/JQRGIc2.jpeg"],
+      "title": "EverFlex Women's Pants",
+      "price": "290",
+      "description": "The \"EverFlex Women's Pants\" are a versatile and comfortable addition to any wardrobe. Crafted from a unique blend of stretchy and durable fabric, these pants provide a flattering fit while allowing for maximum flexibility and ease of movement. The EverFlex technology ensures that these pants hold their shape throughout the day, making them perfect for a variety of activities from running errands to casual outings. The sleek design features a tailored fit, a button and zip closure, and belt loops for added style and functionality. ",
+      "images": [
+        "https://i.imgur.com/mp3rUty.jpeg",
+        "https://i.imgur.com/JQRGIc2.jpeg"
+      ],
       "rating": {
-        "totalValue": 0,
-        "value": 0,
-        "voted": 0
+        "totalValue": 5,
+        "value": 5,
+        "voted": 1
       },
       "category": {
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 8,
-      "title": "Rustic Frozen Chicken",
-      "price": 149,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "title": "Scarlet Red Men's Sweatpants",
+      "price": "169",
+      "description": "The \"Scarlet Red Men's Sweatpants\" are the perfect combination of style and functionality for your active lifestyle. Made from high-quality, breathable fabric, these sweatpants are designed to provide comfort and durability during workouts or casual wear. The vibrant scarlet red color adds a bold pop to your outfit, while the athletic design features a relaxed fit and elastic waistband for a customized fit. The sweat-wicking fabric helps to keep you dry and comfortable, whether you're hitting the gym or running errands. ",
       "images": [
         "https://i.imgur.com/9LFjwpI.jpeg",
         "https://i.imgur.com/vzrTgUR.jpeg",
@@ -177,13 +186,16 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 9,
-      "title": "Fantastic Frozen Soap",
-      "price": 700,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "title": "Navy Blue Baseball Cap",
+      "price": "79",
+      "description": "The \"Navy Blue Baseball Cap\" is a classic and versatile accessory that is sure to elevate your casual style. Made from durable and lightweight cotton twill, this cap features a sleek navy blue color that pairs well with a variety of outfits.  The curved brim provides protection from the sun, making it perfect for outdoor activities or everyday wear. ",
       "images": [
         "https://i.imgur.com/R3iobJA.jpeg",
         "https://i.imgur.com/Wv2KTsf.jpeg",
@@ -198,13 +210,16 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 10,
-      "title": "Elegant Plastic Hat",
-      "price": 832,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "title": "Sky Blue Baseball Cap",
+      "price": "99",
+      "description": "The \"Sky Blue Baseball Cap\" is a stylish and versatile accessory that adds a pop of color to any outfit. Crafted from high-quality cotton twill, this cap features a beautiful sky blue hue that is perfect for sunny days and casual outings. The structured design offers a comfortable fit, while the adjustable strap at the back ensures a customized and secure feel. The curved brim provides protection from the sun, making it a practical choice for outdoor activities. ",
       "images": [
         "https://i.imgur.com/wXuQ7bm.jpeg",
         "https://i.imgur.com/BZrIEmb.jpeg",
@@ -219,13 +234,16 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 11,
-      "title": "Oriental Steel Fish",
-      "price": 215,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "title": "Red Baseball Cap",
+      "price": "120",
+      "description": "The \"Red Baseball Cap\" is a vibrant and statement-making accessory that will elevate any casual outfit. Featuring a bold red color, this cap adds a pop of color and personality to your look. Crafted from durable and high-quality materials, the structured design offers a comfortable fit and the adjustable strap ensures a customizable feel. ",
       "images": [
         "https://i.imgur.com/cBuLvBi.jpeg",
         "https://i.imgur.com/N1GkCIR.jpeg",
@@ -240,13 +258,16 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 12,
-      "title": "Licensed Metal Gloves",
+      "title": "Black Baseball Cap",
       "price": 127,
-      "description": "The Football Is Good For Training And Recreational Purposes",
+      "description": "The \"Black Baseball Cap\" is a timeless and versatile accessory that pairs effortlessly with any outfit. Crafted from sleek and durable black cotton twill, this cap exudes a classic and understated style. The curved brim provides sun protection and adds a sporty touch to your look. ",
       "images": [
         "https://i.imgur.com/KeqG6r4.jpeg",
         "https://i.imgur.com/xGQOw3p.jpeg",
@@ -261,14 +282,20 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 13,
-      "title": "Recycled Frozen Pants",
-      "price": 750,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "images": ["https://i.imgur.com/UsFIvYs.jpeg", "https://i.imgur.com/YIq57b6.jpeg"],
+      "title": "Green Men's Shorts",
+      "price": "260",
+      "description": "These stylish Green Men's Shorts are the perfect addition to your summer wardrobe. Crafted from a lightweight and breathable fabric, these shorts are comfortable to wear in warm weather. Pair them with a T-shirt or polo shirt for a casual and laid-back look.",
+      "images": [
+        "https://i.imgur.com/UsFIvYs.jpeg",
+        "https://i.imgur.com/YIq57b6.jpeg"
+      ],
       "rating": {
         "totalValue": 0,
         "voted": 0,
@@ -278,19 +305,23 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 14,
-      "title": "Incredible Plastic Chips",
-      "price": 994,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "title": "Gray Women's Summer Shorts",
+      "price": "310",
+      "description": "Get ready for summer in style with these trendy Gray Women's Summer Shorts. Made from a soft and lightweight fabric, these shorts are comfortable to wear all day long. The versatile gray color makes them easy to mix and match with different tops and shoes, while the relaxed fit provides a flattering silhouette. The elastic waistband ensures a comfortable and secure fit, and the shorts are designed with functional pockets for added convenience. ",
       "images": [
         "https://i.imgur.com/eGOUveI.jpeg",
         "https://i.imgur.com/UcsGO7E.jpeg",
         "https://i.imgur.com/NLn4e7S.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -298,19 +329,23 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 15,
-      "title": "Electronic Fresh Chair",
-      "price": 575,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "White Women's Tank Top",
+      "price": "160",
+      "description": "Stay cool and stylish in this chic White Women's Tank Top. Made from a soft and breathable fabric, this tank top is perfect for warm weather days. The classic white color is versatile and easy to style with a variety of bottoms, making it a wardrobe essential. Whether you're pairing it with shorts, jeans, or a skirt, this tank top is a versatile piece that can be dressed up or down for any occasion.",
       "images": [
         "https://i.imgur.com/axsyGpD.jpeg",
         "https://i.imgur.com/T8oq9X2.jpeg",
         "https://i.imgur.com/J6MinJn.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -318,19 +353,23 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 16,
-      "title": "Refined Metal Hat",
-      "price": 468,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "title": "White Men's Tank Top",
+      "price": "70",
+      "description": "Update your casual wardrobe with this classic White Men's Tank Top. Made from a comfortable and breathable fabric, this tank top is a versatile option for everyday wear. The crisp white color adds a fresh and clean look to your outfit, while the sleeveless design provides freedom of movement. The regular fit and round neckline offer a flattering silhouette, making it easy to pair with shorts, jeans, or athletic pants.",
       "images": [
         "https://i.imgur.com/Y54Bt8J.jpeg",
         "https://i.imgur.com/SZPDSgy.jpeg",
         "https://i.imgur.com/sJv4Xx0.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -338,19 +377,23 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 17,
-      "title": "Fantastic Cotton Shirt",
-      "price": 814,
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "title": "Black Tank Top",
+      "price": "110",
+      "description": "Add a touch of sophistication to your outfit with this sleek Black Tank Top. Made from a soft and stretchy fabric, this tank top offers comfort and style in one. The versatile black color allows for effortless pairing with any bottoms, while the sleeveless design keeps you cool in warmer weather. ",
       "images": [
         "https://i.imgur.com/9DqEOV5.jpeg",
         "https://i.imgur.com/ae0AEYn.jpeg",
         "https://i.imgur.com/mZ4rUjj.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -358,21 +401,25 @@
         "id": 1,
         "name": "Clothes",
         "image": "https://i.imgur.com/QkIa5tT.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 18,
-      "title": "Awesome Metal Fish",
-      "price": 460,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "Gaming Joystick Xio",
+      "price": "220",
+      "description": "Immerse yourself in the world of gaming with this advanced Gaming Joystick Xio. Designed for precision and control, this joystick offers a responsive and ergonomic gaming experience. With customizable buttons and a comfortable grip, you can easily navigate through your favorite games with ease. This Gaming Joystick enhances your gameplay and brings your gaming experience to the next level.",
       "images": [
         "https://i.imgur.com/ZANVnHE.jpeg",
         "https://i.imgur.com/Ro5z6Tn.jpeg",
         "https://i.imgur.com/woA93Li.jpeg"
       ],
       "rating": {
-        "value": 4,
-        "voted": 4
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
       },
       "category": {
         "id": 2,
@@ -385,115 +432,136 @@
     },
     {
       "id": 19,
-      "title": "Practical Metal Tuna",
+      "title": "White Wireless Headphones",
       "price": 360,
-      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "description": "Enjoy the freedom of wireless listening with these sleek White Wireless Headphones. Featuring a modern and minimalist design, these headphones provide high-quality audio performance without the hassle of cords.  With Bluetooth connectivity, you can easily pair these headphones with your favorite devices for seamless music streaming or hands-free calls. Whether you're on the go, working out, or relaxing at home, these White Wireless Headphones deliver exceptional sound quality and style.",
       "images": [
         "https://i.imgur.com/yVeIeDa.jpeg",
         "https://i.imgur.com/jByJ4ih.jpeg",
         "https://i.imgur.com/KXj6Tpb.jpeg"
       ],
       "rating": {
-        "voted": 0,
-        "value": 0
+        "totalValue": 12,
+        "value": 3,
+        "voted": 4
       },
       "category": {
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 20,
-      "title": "Awesome Steel Sausages",
+      "title": "Black Headphones",
       "price": 204,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "description": "Immerse yourself in your favorite tunes with these stylish Black Headphones. Designed for comfort and performance, these headphones deliver rich and clear sound quality for an enhanced listening experience. With a tangle-free cord and compatibility with a wide range of devices, these Black Headphones are perfect for music lovers on the go. ",
       "images": [
         "https://i.imgur.com/SolkFEB.jpeg",
         "https://i.imgur.com/KIGW49u.jpeg",
         "https://i.imgur.com/mWwek7p.jpeg"
       ],
       "rating": {
-        "voted": 0,
-        "value": 0
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
       },
       "category": {
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 21,
-      "title": "Rustic Frozen Computer",
-      "price": 861,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "title": "Toaster Gollard",
+      "price": "320",
+      "description": "Start your day off right with this versatile Toaster. Featuring a sleek and compact design, this toaster is a convenient addition to any kitchen. With multiple settings for toasting preferences, you can enjoy your bread, bagels, or pastries exactly how you like them. The sleek black exterior adds a touch of modernity to your countertop, while the wide slots accommodate various bread sizes.",
       "images": [
         "https://i.imgur.com/keVCVIa.jpeg",
         "https://i.imgur.com/afHY7v2.jpeg",
         "https://i.imgur.com/yAOihUe.jpeg"
       ],
       "rating": {
-        "voted": 0,
-        "value": 0
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
       },
       "category": {
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 22,
-      "title": "Awesome Metal Pizza",
-      "price": 237,
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "title": "Sky Blue Wireless Mouse",
+      "price": "120",
+      "description": "Upgrade your computing experience with the Sky Blue Wireless Mouse. This sleek and stylish mouse features a smooth, glossy finish in a vibrant shade of blue. With two buttons and a scrolling wheel, this mouse offers precision control and ease of use. Say goodbye to tangled cords and enjoy the freedom of wireless connectivity.",
       "images": [
         "https://i.imgur.com/w3Y8NwQ.jpeg",
         "https://i.imgur.com/WJFOGIC.jpeg",
         "https://i.imgur.com/dV4Nklf.jpeg"
       ],
       "rating": {
-        "voted": 0,
-        "value": 0
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
       },
       "category": {
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 23,
-      "title": "Rustic Plastic Tuna",
-      "price": 266,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "title": "Luminous Elegance Laptop",
+      "price": "790",
+      "description": "Experience the perfect blend of style and functionality with the Luminous Elegance Laptop. This sleek and modern device features a vibrant display that transitions from green to pink, creating a mesmerizing glow beneath the screen. Equipped with the latest technology and powerful performance, this laptop is designed to meet all your computing needs. Elevate your digital lifestyle with this innovative device today.",
       "images": [
         "https://i.imgur.com/OKn1KFI.jpeg",
         "https://i.imgur.com/G4f21Ai.jpeg",
         "https://i.imgur.com/Z9oKRVJ.jpeg"
       ],
       "rating": {
-        "voted": 0,
-        "value": 0
+        "totalValue": 0,
+        "value": 0,
+        "voted": 0
       },
       "category": {
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 24,
-      "title": "Awesome Plastic Fish",
-      "price": 762,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "title": "CANIVV EleganceBook",
+      "price": "855",
+      "description": "Experience the ultimate elegance and performance with the CANIVV EleganceBook. This sleek and stylish laptop is designed to elevate your computing experience. With cutting-edge technology, powerful performance, and a stunning display, this laptop is perfect for work, entertainment, and everything in between. Unleash your productivity and creativity with the CANIVV EleganceBook.",
       "images": [
         "https://i.imgur.com/ItHcq7o.jpeg",
         "https://i.imgur.com/55GM3XZ.jpeg",
         "https://i.imgur.com/tcNJxoW.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -501,19 +569,23 @@
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 25,
-      "title": "Bespoke Soft Bike",
+      "title": "Crimson Soundwave Headphones",
       "price": 420,
-      "description": "The Football Is Good For Training And Recreational Purposes",
+      "description": "Immerse yourself in the world of music with the Crimson Soundwave Headphones. These stylish headphones feature plush gray ear cushions and a vibrant red headband for a comfortable and striking design. With high-quality audio drivers, these headphones deliver crisp and clear sound for an enhanced listening experience. Elevate your audio experience with these stylish and versatile headphones.",
       "images": [
         "https://i.imgur.com/YaSqa06.jpeg",
         "https://i.imgur.com/isQAliJ.jpeg",
         "https://i.imgur.com/5B8UQfh.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -521,19 +593,23 @@
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 26,
-      "title": "Intelligent Fresh Fish",
-      "price": 434,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "title": "SilverTech smartphone Pro ",
+      "price": "480",
+      "description": "Introducing the SilverTech Pro smartphone - a sleek and stylish device that combines cutting-edge technology with elegant design. Featuring dual rear cameras for capturing stunning photos and videos, this smartphone is designed to keep up with your modern lifestyle. The metallic silver finish gives it a premium look and feel, while the advanced features ensure smooth performance and efficiency. Stay connected, stay productive, and stay stylish with the SilverTech Pro smartphone.\"",
       "images": [
         "https://i.imgur.com/yb9UQKL.jpeg",
         "https://i.imgur.com/m2owtQG.jpeg",
         "https://i.imgur.com/bNiORct.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -541,19 +617,23 @@
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 27,
-      "title": "Small Granite Pizza",
-      "price": 834,
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "title": "Azure Elegance Timepiece",
+      "price": "325",
+      "description": "Elevate your style with the Azure Elegance Timepiece. These smart watches feature a sleek design with a blue strap and an analog clock face to add a touch of sophistication to your look. Perfect for any occasion, the Azure Elegance Timepiece is a must-have accessory for those who value both style and practicality.",
       "images": [
         "https://i.imgur.com/LGk9Jn2.jpeg",
         "https://i.imgur.com/1ttYWaI.jpeg",
         "https://i.imgur.com/sPRWnJH.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -561,19 +641,47 @@
         "id": 2,
         "name": "Electronics",
         "image": "https://i.imgur.com/ZANVnHE.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 28,
-      "title": "Recycled Bronze Sausages",
-      "price": 315,
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "title": "Sleek Black Leather Sofa",
+      "price": "870",
+      "description": "Elevate your living space with the Sleek Black Leather Sofa. Crafted with a modern design featuring a luxurious black leather upholstery and a sturdy metal frame, this sofa exudes sophistication and style. The thick armrests provide added comfort, while the sleek silhouette and metallic legs offer a contemporary touch to any room. ",
       "images": [
         "https://i.imgur.com/Qphac99.jpeg",
         "https://i.imgur.com/dJjpEgG.jpeg",
         "https://i.imgur.com/MxJyADq.jpeg"
       ],
       "rating": {
+        "totalValue": 5,
+        "value": 5,
+        "voted": 1
+      },
+      "category": {
+        "id": 3,
+        "name": "Furniture",
+        "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
+      }
+    },
+    {
+      "id": 29,
+      "title": "Modern Wooden Dining Table",
+      "price": "410",
+      "description": "Add a touch of elegance to your dining space with the Modern Wooden Dining Table. This stylish table features a rectangular design with sturdy wooden legs and a light-colored wooden top, providing a perfect surface for meals and gatherings. The set comes complete with a white fruit bowl, adding a pop of color and freshness to the table. The minimalist white hanging lamp above creates a warm and inviting ambiance, perfect for enjoying meals with family and friends.",
+      "images": [
+        "https://i.imgur.com/DMQHGA0.jpeg",
+        "https://i.imgur.com/qrs9QBg.jpeg",
+        "https://i.imgur.com/XVp8T1I.jpeg"
+      ],
+      "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -587,36 +695,17 @@
       }
     },
     {
-      "id": 29,
-      "title": "Rustic Cotton Computer",
-      "price": 966,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "images": [
-        "https://i.imgur.com/DMQHGA0.jpeg",
-        "https://i.imgur.com/qrs9QBg.jpeg",
-        "https://i.imgur.com/XVp8T1I.jpeg"
-      ],
-      "rating": {
-        "voted": 0,
-        "value": 0
-      },
-      "category": {
-        "id": 3,
-        "name": "Furniture",
-        "image": "https://i.imgur.com/Qphac99.jpeg"
-      }
-    },
-    {
       "id": 30,
-      "title": "Electronic Concrete Tuna",
+      "title": "Golden Elegance Round Table",
       "price": 304,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "description": "Elevate your dining room decor with the exquisite Golden Elegance Round Table.  The table is complemented by a matching plate, cup, and vibrant orange for a touch of color and sophistication. Whether you're hosting a formal dinner or enjoying a casual meal, the Golden Elegance Round Table is sure to impress with its glamorous aesthetics and stylish flair. Upgrade your dining experience with this statement piece that effortlessly combines elegance and modern design.",
       "images": [
         "https://i.imgur.com/NWIJKUj.jpeg",
         "https://i.imgur.com/Jn1YSLk.jpeg",
         "https://i.imgur.com/VNZRvx5.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -624,19 +713,23 @@
         "id": 3,
         "name": "Furniture",
         "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 31,
-      "title": "Small Soft Keyboard",
+      "title": "Blue Velvet Accent Chair",
       "price": 213,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "description": "Add a pop of color and style to your living space with the Blue Velvet Accent Chair. This elegant chair features a rich blue velvet upholstery that offers both comfort and sophistication. The chair is supported by sturdy wooden legs and armrests, providing a stable base for relaxation. The sleek design and luxurious fabric make this chair a perfect addition to any room, enhancing the overall aesthetic. ",
       "images": [
         "https://i.imgur.com/6wkyyIN.jpeg",
         "https://i.imgur.com/Ald3Rec.jpeg",
         "https://i.imgur.com/dIqo03c.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -644,19 +737,23 @@
         "id": 3,
         "name": "Furniture",
         "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 32,
-      "title": "Bespoke Bronze Chicken",
-      "price": 640,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "title": "Rustic Wood Dining Table",
+      "price": 280,
+      "description": "This beautiful rustic wood dining table is the perfect addition to your dining room. Handcrafted from high-quality wood, this table features a charming weathered finish that adds character to any space. The sturdy construction ensures durability, while the natural wood grain adds a touch of elegance.",
       "images": [
         "https://i.imgur.com/4lTaHfF.jpeg",
         "https://i.imgur.com/JktHE1C.jpeg",
         "https://i.imgur.com/cQeXQMi.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -664,19 +761,23 @@
         "id": 3,
         "name": "Furniture",
         "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 33,
-      "title": "Awesome Bronze Chair",
+      "title": "Vintage Wood Writing Desk",
       "price": 213,
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "description": "Enhance your workspace with this vintage wood writing desk. Crafted from solid wood, this desk features a timeless design with a rustic finish that adds character to any office or study. The spacious desktop provides ample room for your laptop, books, and other essentials, while the sturdy construction ensures stability and durability. ",
       "images": [
         "https://i.imgur.com/3oXNBst.jpeg",
         "https://i.imgur.com/ErYYZnT.jpeg",
         "https://i.imgur.com/boBPwYW.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -684,15 +785,22 @@
         "id": 3,
         "name": "Furniture",
         "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 34,
-      "title": "Fantastic Wooden Pants",
+      "title": "Modern Office Chair",
       "price": 526,
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "images": ["https://i.imgur.com/3dU0m72.jpeg", "https://i.imgur.com/zPU3EVa.jpeg"],
+      "description": "pgrade your office with this sleek plastic office chair. Made from high-quality, durable plastic, this chair combines style and functionality to create a modern seating solution for your workspace. The ergonomic design and adjustable features ensure optimal comfort and support for extended periods of sitting. The smooth, contoured shape and sleek finish add a touch of sophistication to any office decor. Whether you're working on a presentation or attending virtual meetings, this plastic office chair will provide a comfortable and stylish seating option",
+      "images": [
+        "https://i.imgur.com/3dU0m72.jpeg",
+        "https://i.imgur.com/zPU3EVa.jpeg"
+      ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -700,19 +808,23 @@
         "id": 3,
         "name": "Furniture",
         "image": "https://i.imgur.com/Qphac99.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 35,
-      "title": "Tasty Frozen Chair",
-      "price": 900,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "title": "Silver Metallic Soccer Cleats",
+      "price": "680",
+      "description": "Step up your game with these stylish silver metallic soccer cleats. Crafted with high-quality materials, these cleats feature a sleek silver metallic finish that will make you stand out on the field. The durable construction and comfortable fit provide support and agility for quick movements and precise control of the ball. Whether you're playing competitively or just for fun, these silver metallic soccer cleats will give you the confidence and performance you need to play your best. ",
       "images": [
         "https://i.imgur.com/qNOjJje.jpeg",
         "https://i.imgur.com/NjfCFnu.jpeg",
         "https://i.imgur.com/eYtvXS1.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "value": 2,
         "voted": 1
       },
@@ -727,15 +839,16 @@
     },
     {
       "id": 36,
-      "title": "Sleek Plastic Pizza",
-      "price": 233,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "title": "Silver High Heel Shoes",
+      "price": "420",
+      "description": "Make a statement with these stunning silver high heel shoes. Crafted with a metallic silver finish, these shoes are the perfect blend of style and sophistication. The towering heels will add height and elegance to any outfit, making them ideal for special occasions or a night out on the town. Add a touch of glamour to your wardrobe and step out with confidence in these must-have shoes!",
       "images": [
         "https://i.imgur.com/62gGzeF.jpeg",
         "https://i.imgur.com/5MoPuFM.jpeg",
         "https://i.imgur.com/sUVj7pK.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -743,19 +856,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 37,
-      "title": "Handmade Rubber Chair",
-      "price": 838,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "title": "Kids' Summer Sandals",
+      "price": "180",
+      "description": "Get your little one ready for summer adventures with these adorable kids' summer sandals. Made with lightweight and breathable materials, these sandals are perfect for keeping little feet cool and comfortable on hot summer days. The adjustable straps ensure a secure fit, while the sturdy soles provide support and traction for all-day play.",
       "images": [
         "https://i.imgur.com/9qrmE1b.jpeg",
         "https://i.imgur.com/wqKxBVH.jpeg",
         "https://i.imgur.com/sWSV6DK.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -763,19 +880,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 38,
-      "title": "Oriental Plastic Gloves",
-      "price": 378,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "title": "Kids' Athletic Sneakers",
+      "price": "220",
+      "description": "Get your little one ready for playtime with these stylish and comfortable kids' athletic sneakers. Designed for active kids on the go, these sneakers feature a durable construction and cushioned insoles to provide support and comfort during all their adventures. The breathable mesh upper helps keep feet cool and dry, while the sturdy rubber outsoles offer traction and stability for running, jumping, and playing. Whether they're at the playground, school, or sports practice, these kids' athletic sneakers will keep up with their active lifestyle.",
       "images": [
         "https://i.imgur.com/hKcMNJs.jpeg",
         "https://i.imgur.com/NYToymX.jpeg",
         "https://i.imgur.com/HiiapCt.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -783,19 +904,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 39,
-      "title": "Ergonomic Steel Car",
-      "price": 596,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "title": "Pink Kids' Sneakers",
+      "price": "195",
+      "description": "Add a splash of color to your child's wardrobe with these cute pink kids' sneakers. Crafted with a vibrant pink hue, these sneakers will brighten up any outfit and bring a fun and playful touch to their look. The comfortable fit and lightweight design make them perfect for all-day wear, whether your child is at school, playing with friends, or running errands with the family. The durable construction and secure laces provide support and stability for active little ones on the move.",
       "images": [
         "https://i.imgur.com/mcW42Gi.jpeg",
         "https://i.imgur.com/mhn7qsF.jpeg",
         "https://i.imgur.com/F8vhnFJ.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -803,6 +928,9 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
@@ -816,6 +944,7 @@
         "https://i.imgur.com/HxuHwBO.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -836,6 +965,7 @@
         "https://i.imgur.com/qa0O6fg.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -847,15 +977,16 @@
     },
     {
       "id": 42,
-      "title": "Generic Frozen Soap",
-      "price": 699,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "title": "Low Heel Summer Shoes",
+      "price": "350",
+      "description": "Step into summer in style with these trendy low heel summer shoes. Designed for comfort and fashion, these shoes feature a low heel that provides a touch of elevation without compromising on comfort. The lightweight and breathable materials make these shoes ideal for warm weather, keeping your feet cool and comfortable all day long. Whether you're running errands, meeting friends for brunch, or attending a summer party, these versatile shoes will elevate your look with a chic and effortless vibe.",
       "images": [
         "https://i.imgur.com/AzAY4Ed.jpeg",
         "https://i.imgur.com/umfnS9P.jpeg",
         "https://i.imgur.com/uFyuvLg.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -863,19 +994,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 43,
-      "title": "Recycled Concrete Chair",
-      "price": 743,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "Men's Leather Dress Shoes",
+      "price": "450",
+      "description": "Elevate your style with these sophisticated men's leather dress shoes. Crafted from high-quality leather, these shoes exude timeless elegance and superior craftsmanship. The sleek design and classic silhouette make them versatile enough to wear to formal events, business meetings, or even a night out on the town.",
       "images": [
         "https://i.imgur.com/Au8J9sX.jpeg",
         "https://i.imgur.com/gdr8BW2.jpeg",
         "https://i.imgur.com/KDCZxnJ.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -883,19 +1018,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 44,
-      "title": "Practical Rubber Bike",
-      "price": 391,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "title": "Kids' Autumn Oxford Shoes",
+      "price": "247",
+      "description": "Get your little one ready for autumn adventures with these charming kids' autumn oxford shoes. Crafted from durable materials, these shoes are perfect for crisp fall days, providing comfort and style. Their classic design and soft lining make them comfortable to wear, while the hook and loop closure provides support and a comfortable fit.",
       "images": [
         "https://i.imgur.com/sC0ztOB.jpeg",
         "https://i.imgur.com/Jf9DL9R.jpeg",
         "https://i.imgur.com/R1IN95T.jpeg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -903,19 +1042,23 @@
         "id": 4,
         "name": "Shoes",
         "image": "https://i.imgur.com/qNOjJje.jpeg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 45,
-      "title": "Tasty Wooden Bacon",
-      "price": 302,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "title": "Modern Classic Bicycle Zio",
+      "price": "630",
+      "description": " Introducing the modern classic bicycle that combines timeless style with contemporary features. This sleek bicycle features a mix of plastic and metal components, blending durability with a lightweight design for a smooth ride. With its stylish aesthetic and innovative construction, this bicycle is perfect for riders who appreciate classic design elements with a modern twist. Whether you're cruising through the city streets or exploring nature trails, this bicycle offers a comfortable and reliable ride.",
       "images": [
         "https://i.imgur.com/BG8J0Fj.jpg",
         "https://i.imgur.com/ujHBpCX.jpg",
         "https://i.imgur.com/WHeVL9H.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -923,6 +1066,9 @@
         "id": 5,
         "name": "Miscellaneous",
         "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
@@ -936,6 +1082,7 @@
         "https://i.imgur.com/kc0Dj9S.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -956,6 +1103,7 @@
         "https://i.imgur.com/kG05a29.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -967,15 +1115,16 @@
     },
     {
       "id": 48,
-      "title": "Gorgeous Soft Pants",
-      "price": 409,
-      "description": "The Football Is Good For Training And Recreational Purposes",
+      "title": "Classic Suitcase with Wheels",
+      "price": "370",
+      "description": "Travel in style with this small classic suitcase featuring convenient wheels. This timeless suitcase combines functionality with a classic design, making it the perfect travel companion for your adventures. The compact size is ideal for short trips or weekend getaways, while the durable construction ensures your belongings are protected throughout your journey. The addition of wheels allows for effortless maneuverability, making it easy to navigate through airports, train stations, or busy streets. Pack your essentials in this small classic suitcase with wheels and embark on your next journey in style and convenience",
       "images": [
         "https://i.imgur.com/jVfoZnP.jpg",
         "https://i.imgur.com/Tnl15XK.jpg",
         "https://i.imgur.com/7OqTPO6.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -983,19 +1132,23 @@
         "id": 5,
         "name": "Miscellaneous",
         "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 49,
-      "title": "Recycled Soft Bike",
-      "price": 493,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "title": "Transparent Ladies' Handbag",
+      "price": "479",
+      "description": "Make a fashion statement with this transparent ladies' handbag featuring a chic gold chain. This stylish handbag combines the trendy appeal of transparency with the luxury touch of a gold chain, creating a sophisticated accessory for any outfit. The see-through design allows you to showcase your essentials while adding a modern touch to your ensemble. The elegant gold chain strap adds a touch of glamour and versatility, making it easy to carry the handbag with effortless style. Whether you're heading to a formal event or a casual outing, this transparent handbag with a gold chain will be the perfect accessory to elevate your look and showcase your fashion-forward sense of style.",
       "images": [
         "https://i.imgur.com/Lqaqz59.jpg",
         "https://i.imgur.com/uSqWK0m.jpg",
         "https://i.imgur.com/atWACf1.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -1003,19 +1156,23 @@
         "id": 5,
         "name": "Miscellaneous",
         "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 50,
-      "title": "Electronic Plastic Fish",
-      "price": 206,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "title": "Fashionable Sunglasses Pink World",
+      "price": "189",
+      "description": "Elevate your style with these fashionable sunglasses featuring pink lenses. These trendy sunglasses are perfect for making a bold fashion statement while protecting your eyes from the sun's rays. The pink lenses add a touch of fun and playfulness to any outfit, making them a versatile accessory for both casual and dressy occasions. With a lightweight and comfortable design, these sunglasses are suitable for all-day wear, whether you're hitting the beach, strolling through the city, or enjoying a sunny day outdoors.",
       "images": [
         "https://i.imgur.com/0qQBkxX.jpg",
         "https://i.imgur.com/I5g1DoE.jpg",
         "https://i.imgur.com/myfFQBW.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -1023,19 +1180,23 @@
         "id": 5,
         "name": "Miscellaneous",
         "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      },
+      "discount": {
+        "value": 0
       }
     },
     {
       "id": 51,
-      "title": "Handcrafted Cotton Chair",
+      "title": "Clear High-Quality Glass Tumbler",
       "price": 45,
-      "description": "The Football Is Good For Training And Recreational Purposes",
+      "description": "This elegant clear glass tumbler will be a stylish addition to your table setting. Made from high-quality glass, this tumbler combines durability with a refined design. Its transparent surface allows you to enjoy the contents and create visually appealing drinks. The convenient size and shape make it ideal for a variety of beverages - from water and juice to cocktails and hot drinks. Get this stylish clear glass tumbler and elevate the elegance of your table setting.",
       "images": [
         "https://i.imgur.com/TF0pXdL.jpg",
         "https://i.imgur.com/BLDByXP.jpg",
         "https://i.imgur.com/b7trwCv.jpg"
       ],
       "rating": {
+        "totalValue": 0,
         "voted": 0,
         "value": 0
       },
@@ -1043,6 +1204,9 @@
         "id": 5,
         "name": "Miscellaneous",
         "image": "https://i.imgur.com/BG8J0Fj.jpg"
+      },
+      "discount": {
+        "value": 0
       }
     }
   ],
@@ -1096,8 +1260,33 @@
     {
       "email": "coneter@mail.ru",
       "password": "1234",
-      "productsInCart": [],
+      "productsInCart": [
+        {
+          "id": 1,
+          "selected": true,
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "selected": false,
+          "quantity": 3
+        },
+        {
+          "id": 3,
+          "selected": true
+        },
+        {
+          "id": 4,
+          "selected": true
+        }
+      ],
       "id": 2
+    },
+    {
+      "email": "krus_coneter@mail.ru",
+      "password": "12345",
+      "productsInCart": [],
+      "id": 3
     }
   ]
 }

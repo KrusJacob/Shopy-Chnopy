@@ -10,7 +10,7 @@ import { type } from "os";
 
 const starStyles = {
   strokeWidth: 1,
-  size: 36,
+  size: 34,
 };
 
 const stars = ["bad", "not very", "acceptable", "good", "excellent"];
@@ -20,7 +20,10 @@ type FeedBackProductFormProps = {
   product: IProduct;
 };
 
-const FeedBackProductForm: FC<FeedBackProductFormProps> = ({ setIsFeedback, product }) => {
+const FeedBackProductForm: FC<FeedBackProductFormProps> = ({
+  setIsFeedback,
+  product,
+}) => {
   const [feedBackTitle, setFeedBackTitle] = useState("");
   const [isVoted, setIsVoted] = useState(false);
 
@@ -36,6 +39,7 @@ const FeedBackProductForm: FC<FeedBackProductFormProps> = ({ setIsFeedback, prod
         voted: product.rating.voted + 1,
       },
     };
+    console.log(chandedProduct, "chandedProduct");
     mutation.mutate(chandedProduct);
     useToast.voteRateProduct(product.title, ratingValue);
   };
@@ -46,35 +50,45 @@ const FeedBackProductForm: FC<FeedBackProductFormProps> = ({ setIsFeedback, prod
     mutationKey: ["product", `productId:${product.id}`],
     mutationFn: (product: IProduct) => productApi.changeProduct(product),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["product", `productId:${product.id}`] });
+      queryClient.invalidateQueries({
+        queryKey: ["product", `productId:${product.id}`],
+      });
       setIsFeedback(false);
     },
   });
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -100 }}
+      initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      className="mt-14 border py-2 px-2 w-min rounded bg-slate-50 border-grayDark "
+      exit={{ opacity: 0, y: 20 }}
+      className="mt-4 border py-2 px-2 w-min rounded bg-slate-50 border-grayDark absolute bottom-12"
     >
       <div className="flex gap-2 text-lg">
         <h5>You feedback:</h5>
         <p>{feedBackTitle}</p>
       </div>
-      <div className="flex gap-1 mt-2 px-8">
+      <div className="flex gap-2 mt-1 px-4">
         {stars.map((item, i) => (
           <Star
             key={item}
             {...starStyles}
             className="duration-200 cursor-pointer"
-            fill={i > stars.findIndex((star) => star === feedBackTitle) ? "beige" : "gold"}
+            fill={
+              i > stars.findIndex((star) => star === feedBackTitle)
+                ? "beige"
+                : "gold"
+            }
             onMouseEnter={() => setFeedBackTitle(item)}
             onClick={() => setIsVoted(true)}
           />
         ))}
       </div>
-      <Button onClick={onSubmitVote} disabled={!isVoted} className="mt-8 mx-auto disabled:opacity-60">
+      <Button
+        onClick={onSubmitVote}
+        disabled={!isVoted}
+        className="mt-4 mx-auto disabled:opacity-60"
+      >
         Submit
       </Button>
     </motion.div>

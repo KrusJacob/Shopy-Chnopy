@@ -1,7 +1,9 @@
 import { InCart } from "@/types/product.type";
 import { IUser } from "@/types/user.types";
+import { BASE_URL } from "..";
 
-const URL = "http://localhost:3001/users";
+// const URL = "http://localhost:3001/users";
+const URL = `${BASE_URL}/users`;
 
 export const userApi = {
   fetchUsers: async () => {

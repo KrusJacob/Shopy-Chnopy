@@ -5,7 +5,7 @@ import { useCategoryStore } from "@/store/category/storeCategory";
 import { ICategory, IProduct } from "@/types/product.type";
 import { useQuery } from "@tanstack/react-query";
 import React, { useEffect } from "react";
-import Search from "@/components/entities/search/Search";
+import Search from "@/components/entities/filter/search/Search";
 import { useFilter } from "@/hooks/useFilter";
 import { categoryApi } from "@/services/category/categoryApi";
 import Button from "@/components/UI/button/Button";
@@ -55,7 +55,9 @@ const AdminPage = () => {
             {categories.map((item: ICategory) => (
               <Button
                 key={item.id}
-                className={`${category === item.id.toString() ? "bg-greenLight" : ""}`}
+                className={`${
+                  category === item.id.toString() ? "bg-greenLight" : ""
+                }`}
                 onClick={() => changeCategory(item.id.toString())}
               >
                 {item.name}
@@ -67,7 +69,11 @@ const AdminPage = () => {
             <>
               <div className="flex flex-wrap border-l border-grayDark mt-2 pl-2 ">
                 {filteredProducts.map((product: IProduct) => (
-                  <ProductItem key={product.id} product={product} type="InAdmin" />
+                  <ProductItem
+                    key={product.id}
+                    product={product}
+                    type="InAdmin"
+                  />
                 ))}
               </div>
             </>

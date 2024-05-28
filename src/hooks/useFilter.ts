@@ -8,9 +8,11 @@ export const useFilter = (products: IProduct[]) => {
   const maxPrice = useSortStore((state) => state.maxPrice);
 
   const getFilteredProducts = () => {
-    //temp
     let filteredProducts = [];
-    filteredProducts = temp ? products.filter((product) => RegExp(temp, "i").test(product.title)) : products;
+    //temp
+    filteredProducts = temp
+      ? products.filter((product) => RegExp(temp, "i").test(product.title))
+      : products;
 
     // sort
     if (sort === "min" || sort === "max") {
@@ -21,6 +23,21 @@ export const useFilter = (products: IProduct[]) => {
         filteredProducts.reverse();
       }
     }
+    if (sort === "popular") {
+      filteredProducts = filteredProducts
+        .sort((x, y) => {
+          return (x.rating.totalValue || 0) - (y.rating.totalValue || 0);
+        })
+        .reverse();
+    }
+    if (sort === "rating") {
+      filteredProducts = filteredProducts
+        .sort((x, y) => {
+          return (x.rating.value || 0) - (y.rating.value || 0);
+        })
+        .reverse();
+    }
+
     //minPrice|maxPrice
     filteredProducts = filteredProducts.filter((item: IProduct) => {
       if (minPrice && maxPrice) {

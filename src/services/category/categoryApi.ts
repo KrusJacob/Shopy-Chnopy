@@ -1,5 +1,7 @@
-// const URL = "https://api.escuelajs.co/api/v1/categories";
-const URL = "http://localhost:3001/categories";
+import { BASE_URL } from "..";
+
+// const URL = "http://localhost:3001/categories";
+const URL = `${BASE_URL}/categories`;
 
 export const categoryApi = {
   fetchCategories: async () => {

@@ -56,14 +56,14 @@ const ProductSinglePage = ({ id }: { id: string }) => {
   };
 
   return (
-    <div className="max-w-[1200px] m-auto">
+    <div className="max-w-[1200px] m-auto px-2">
       <Button Icon={ArrowLeft} onClick={() => router.back()}>
         Back
       </Button>
 
       {!isLoading && product ? (
-        <div className="grid md:grid-cols-2 justify-center items-center gap-2 m-auto mt-5">
-          <div className="max-w-[720px] relative overflow-hidden px-2 md">
+        <div className="grid md:grid-cols-2 justify-center   gap-2 m-auto mt-5">
+          <div className="max-w-[720px] relative overflow-hidden  md">
             <Swiper
               className="absolute top-0 left-0 object-cover w-full h-full "
               slidesPerView={1}
@@ -79,20 +79,23 @@ const ProductSinglePage = ({ id }: { id: string }) => {
               ))}
             </Swiper>
           </div>
-          <div className="p-6  m-auto">
-            <p className="lg:text-3xl text-2xl font-medium mb-4 text-center">{product?.title}</p>
-            <p className="lg:text-xl text-md mb-6">{product?.description}</p>
-
-            <Rating onClick={onVoteToProduct} rating={product.rating} />
-
-            <div className="mt-10 flex gap-3 lg:text-2xl text-xl items-center font-medium">
+          <div className="p-6 flex flex-col gap-4 m-auto">
+            <p className="lg:text-3xl text-2xl font-medium text-center">{product?.title}</p>
+            <p className="lg:text-xl text-md">{product?.description}</p>
+            <div className="relative">
+              <Rating onClick={onVoteToProduct} rating={product.rating} />
+              <AnimatePresence>
+                {isFeedback && <FeedBackProductForm setIsFeedback={setIsFeedback} product={product} />}
+              </AnimatePresence>
+            </div>
+            <div className=" flex gap-3 lg:text-2xl text-xl items-center font-medium">
               Price:<p className={`${isDiscount ? "line-through" : ""}`}> {product?.price}$</p>
               {isDiscount && <p className="text-redDark text-3xl">{priceWithDiscount}$</p>}
               {isDiscount && (
                 <div className="text-white py-0.5 px-2 rounded bg-redDark">-{product.discount?.value}%</div>
               )}
             </div>
-            <div className="grid grid-cols-2 gap-4 mt-10">
+            <div className="grid grid-cols-2 gap-4">
               <Button onClick={() => setIsShowModal(true)} Icon={ShoppingBag}>
                 Buy
               </Button>
@@ -104,9 +107,9 @@ const ProductSinglePage = ({ id }: { id: string }) => {
                 In cart
               </Button>
             </div>
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {isFeedback && <FeedBackProductForm setIsFeedback={setIsFeedback} product={product} />}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
           {isShowModal && (
             <PaymentModal

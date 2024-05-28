@@ -25,14 +25,14 @@ footer {
   flex: 0 0 auto;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   :root {
     --categoryItem: 190px;
   }
 }
 @media only screen and (max-width: 767px) {
   :root {
-    --categoryItem: 140px;
+    --categoryItem: 130px;
   }
 }
 @media only screen and (max-width: 425px) {

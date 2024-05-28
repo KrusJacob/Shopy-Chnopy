@@ -29,21 +29,27 @@ const CartPage = () => {
 
   return (
     <div className="max-w-[1200px] m-auto">
-      <div className="text-center  flex justify-center gap-8 items-center p-2 border-b-2 border-b-black">
-        <p className="text-4xl ">
-          Total price: <span className="font-medium  mr-2 text-greenDark ">{totalPrice}</span>$
+      <div className="text-center  flex justify-center md:gap-8 gap-4 items-center p-2 border-b-2 border-b-black">
+        <p className="md:text-3xl text-2xl ">
+          Total price:{" "}
+          <span className="font-medium  mr-2 text-greenDark ">
+            {totalPrice}
+          </span>
+          $
         </p>
         <Button
           Icon={Wallet2}
           onClick={() => setIsShowModal(true)}
-          className="text-xl disabled:opacity-50"
+          className="md:text-xl text-base disabled:opacity-50"
           disabled={!totalPrice}
         >
           Payment
         </Button>
       </div>
       <div className="mt-5">
-        {!products?.length && <p className="text-2xl  text-center">The cart is empty</p>}
+        {!products?.length && (
+          <p className="text-2xl  text-center">The cart is empty</p>
+        )}
         {productsInCart?.map((product) => {
           return (
             <ProductItem
@@ -57,7 +63,11 @@ const CartPage = () => {
         })}
       </div>
       {isShowModal && (
-        <PaymentModal products={productsInCart} setIsShowModal={setIsShowModal} totalPrice={totalPrice} />
+        <PaymentModal
+          products={productsInCart}
+          setIsShowModal={setIsShowModal}
+          totalPrice={totalPrice}
+        />
       )}
     </div>
   );
