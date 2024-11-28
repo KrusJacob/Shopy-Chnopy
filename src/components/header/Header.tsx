@@ -1,11 +1,6 @@
-import { navPaths } from "@/services/navPaths";
-
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import HamburgerMenu from "./HamburgerMenu";
 import styles from "./Header.module.scss";
-import Navigation from "./Navigation";
+import Navigation from "./navigation/Navigation";
 
 const Header = () => {
   return (

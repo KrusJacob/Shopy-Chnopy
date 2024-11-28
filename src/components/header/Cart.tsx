@@ -4,23 +4,13 @@ import React, { useEffect } from "react";
 import { ShoppingBasket } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { navPaths } from "@/services/navPaths";
-import { useSession } from "next-auth/react";
-import { userApi } from "@/services/user/userApi";
-import { useQuery } from "@tanstack/react-query";
+import useUser from "./navigation/useUser";
 
 const Cart = () => {
-  const session = useSession();
-  const userId = session.data?.user?.id;
-  const productsId = useCartStore((state) => state.productsId);
   const setProductCart = useCartStore((state) => state.setProductCart);
-
   const router = useRouter();
 
-  const { data: currentUser, isSuccess } = useQuery({
-    queryKey: ["productsId", userId],
-    queryFn: () => userApi.getUsersById(session.data?.user?.id!),
-    enabled: !!userId,
-  });
+  const { currentUser, isSuccess } = useUser();
 
   useEffect(() => {
     if (isSuccess && currentUser) {
@@ -29,10 +19,16 @@ const Cart = () => {
   }, [isSuccess]);
 
   return (
-    <div onClick={() => router.push(navPaths.CART)} className="relative lg:mr-4">
-      <ShoppingBasket size={50} className="cursor-pointer hover:scale-125 duration-200" />
+    <div
+      onClick={() => router.push(navPaths.CART)}
+      className="relative lg:mr-4"
+    >
+      <ShoppingBasket
+        size={50}
+        className="cursor-pointer hover:scale-125 duration-200"
+      />
       <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-grayDark text-white flex justify-center items-center rounded-full cursor-default animate-zoomIn">
-        <span>{productsId.length || 0}</span>
+        <span>{currentUser?.productsInCart.length || 0}</span>
       </div>
     </div>
   );

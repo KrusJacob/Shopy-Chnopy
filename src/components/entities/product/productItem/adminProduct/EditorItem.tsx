@@ -1,22 +1,26 @@
 import Button from "@/components/UI/button/Button";
 import Input from "@/components/UI/input/Input";
-import { useToast } from "@/hooks/useToast";
-import { productApi } from "@/services/product/productApi";
 import { IProduct } from "@/types/product.type";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { FC, useState } from "react";
+import useEditProduct from "./useEditProduct";
 
 type IEditorItemProps = {
   product: IProduct;
   setIsEditor: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+export interface StateProps {
+  title: string;
+  description: string;
+  price: number;
+  discountValue: number;
+}
 const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
-  const [productValue, setProductValue] = useState({
+  const [productValue, setProductValue] = useState<StateProps>({
     title: product.title,
     description: product.description,
     price: +product.price,
-    discountValue: product.discount?.value,
+    discountValue: +product.discount.value,
   });
 
   const changeProductValue: React.ChangeEventHandler<
@@ -28,37 +32,15 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
     }));
   };
 
-  const onSaveChangesProduct: React.FormEventHandler<HTMLFormElement> = (e) => {
-    e.preventDefault();
-    const { discountValue, ...preparedProductValues } = productValue;
-    const chandedProduct = {
-      ...preparedProductValues,
-      id: product.id,
-      category: product.category,
-      images: product.images,
-      rating: product.rating,
-      discount: { value: productValue.discountValue || 0 },
-    };
-    mutation.mutate(chandedProduct);
-  };
-  const queryClient = useQueryClient();
-
-  const mutation = useMutation({
-    mutationKey: ["products", `categoryID:${product.category.id}`, product.id],
-    mutationFn: (product: IProduct) => productApi.changeProduct(product),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["products", `categoryID:${product.category.id}`],
-      });
-      setIsEditor(false);
-      useToast.productChanged();
-    },
-  });
+  const { handlerSaveProduct, isPending } = useEditProduct(setIsEditor);
 
   return (
     <>
       <form
-        onSubmit={(e) => onSaveChangesProduct(e)}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handlerSaveProduct(product, productValue);
+        }}
         className="text-base  flex flex-col  w-full"
       >
         <div>
@@ -110,7 +92,9 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           </div>
         </div>
 
-        <Button className="mt-6 md:max-w-[250px]">Save</Button>
+        <Button isLoading={isPending} className="mt-6 md:max-w-[250px]">
+          Save
+        </Button>
       </form>
     </>
   );

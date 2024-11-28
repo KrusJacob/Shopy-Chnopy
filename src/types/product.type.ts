@@ -6,7 +6,7 @@ export interface IProduct {
   images: string[];
   category: ICategory;
   rating: IRating;
-  discount?: IDiscount;
+  discount: IDiscount;
 }
 
 interface IDiscount {

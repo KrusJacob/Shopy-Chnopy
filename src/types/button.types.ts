@@ -5,6 +5,8 @@ export interface IButtonProps {
   Icon?: LucideIcon;
   sizeIcon?: number;
   children: React.ReactNode;
+  isLoading?: boolean;
 }
 
-export type TypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & IButtonProps;
+export type TypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  IButtonProps;

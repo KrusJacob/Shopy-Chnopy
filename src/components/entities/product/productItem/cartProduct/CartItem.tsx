@@ -1,15 +1,12 @@
 import { useCartStore } from "@/store/cart/StoreCart";
-import { useSession } from "next-auth/react";
-
-import React, { useState } from "react";
-
-import ProductInfo from "./ProductInfo";
+import React from "react";
+import ProductInfo from "../ProductInfo";
 import { IProduct } from "@/types/product.type";
 import Input from "@/components/UI/input/Input";
 import Button from "@/components/UI/button/Button";
 import { Trash2 } from "lucide-react";
-import { useToast } from "@/hooks/useToast";
-import ProductItemBody from "./ProductItemBody";
+import ProductItemBody from "../ProductItemBody";
+import useRemoveProduct from "./useRemoveProduct";
 
 interface Props {
   product: IProduct;
@@ -17,19 +14,13 @@ interface Props {
   quantity?: number;
 }
 
-const CartItem = ({ product, checked, quantity }: Props) => {
-  const session = useSession();
-
+const CartItem = ({ product, checked = false, quantity = 1 }: Props) => {
   const excludeProductCart = useCartStore((state) => state.excludeProductCart);
-  const removeProductFromCart = useCartStore((state) => state.removeProductToCart);
-  const changeQuantityProduct = useCartStore((state) => state.changeQuantityProduct);
+  const changeQuantityProduct = useCartStore(
+    (state) => state.changeQuantityProduct
+  );
 
-  const onRemoveProductFromCart = () => {
-    if (session.data) {
-      removeProductFromCart(product.id, session.data?.user.id);
-      useToast.removeProductFromCart(product.title);
-    }
-  };
+  const { handlerRemoveProduct, isPending } = useRemoveProduct();
 
   return (
     <>
@@ -38,7 +29,7 @@ const CartItem = ({ product, checked, quantity }: Props) => {
         <ProductInfo product={product} />
       </div>
       <div className="p-2 flex flex-col gap-6 ">
-        <input
+        <Input
           type="checkbox"
           checked={checked}
           onChange={() => excludeProductCart(product.id)}
@@ -54,7 +45,11 @@ const CartItem = ({ product, checked, quantity }: Props) => {
             className="w-20 ml-2 text-xl text-center"
           />
         </div>
-        <Button Icon={Trash2} onClick={() => onRemoveProductFromCart()}>
+        <Button
+          isLoading={isPending}
+          Icon={Trash2}
+          onClick={() => handlerRemoveProduct(product.id)}
+        >
           Remove
         </Button>
       </div>

@@ -35,7 +35,7 @@ const FilterPrice = () => {
           type="number"
           min="0"
           max="9999"
-          placeholder="from"
+          placeholder="min"
           className="px-4 py-2 text-xl"
         />
         <input
@@ -44,7 +44,7 @@ const FilterPrice = () => {
           type="number"
           min="0"
           max="9999"
-          placeholder="up to"
+          placeholder="max"
           className="px-4 py-2 text-xl"
         />
       </div>

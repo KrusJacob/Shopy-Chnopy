@@ -8,13 +8,16 @@ export const useToast = {
   removeProductFromCart: (productTitle: string = "product") =>
     toast.success(`The ${productTitle} has been removed from cart`),
 
-  voteRateProduct: (productTitle: string = "product", star: number) =>
-    toast.success(`you rated the ${productTitle} ${star} stars, thanks`),
+  voteRateProduct: (productTitle: string = "product") =>
+    toast.success(`you rated the ${productTitle}, thanks`),
 
   loginIn: () => {
     toast.success("login success");
   },
   logOff: () => {
     toast.success("logoff success");
+  },
+  error: () => {
+    toast.error("There was an error");
   },
 };

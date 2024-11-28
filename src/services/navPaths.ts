@@ -3,5 +3,6 @@ export enum navPaths {
   CATALOG = "/catalog",
   CART = "/cart",
   SIGNIN = "/signin",
+  REGISTRATION = "registration",
   ADMIN = "/admin",
 }

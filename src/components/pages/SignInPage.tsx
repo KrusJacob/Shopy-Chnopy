@@ -1,21 +1,24 @@
 "use client";
-import RegitrationForm from "@/components/entities/login/registration/RegitrationForm";
+
 import SigninForm from "@/components/entities/login/signin/SigninForm";
 import Button from "@/components/UI/button/Button";
+import { navPaths } from "@/services/navPaths";
+import { useRouter } from "next/navigation";
 
-import React, { useState } from "react";
+import React from "react";
 
 const SignInPage = () => {
-  const [isSignin, setIsSignin] = useState(true);
+  const router = useRouter();
 
   return (
     <>
-      <>
-        {isSignin ? <SigninForm /> : <RegitrationForm />}
-        <Button onClick={() => setIsSignin(!isSignin)} className="m-auto mt-10 text-sm">
-          {isSignin ? "Create account" : "Back"}
-        </Button>
-      </>
+      <SigninForm />
+      <Button
+        onClick={() => router.push(navPaths.REGISTRATION)}
+        className="m-auto mt-10 text-sm"
+      >
+        Create account
+      </Button>
     </>
   );
 };
