@@ -28,7 +28,10 @@ const HomePage = () => {
           transition={{ duration: 0.75, type: "spring" }}
           className="lg:text-8xl sm:text-5xl text-3xl font-bold"
         >
-          Shopy <span className="text-white px-4 py-2 rounded-lg bg-redLight">Chnopy</span>
+          Shopy{" "}
+          <span className="text-white px-4 py-2 rounded-lg bg-primaryLight">
+            Chnopy
+          </span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: 400 }}
@@ -39,8 +42,8 @@ const HomePage = () => {
           Best Online shop
         </motion.p>
       </div>
-      <div className="mt-8 ml-auto lg:w-1/2 sm:w-3/5 w-4/5">
-        <ul className="lg:text-4xl sm:text-3xl text-xl list-disc grid gap-1 ">
+      <div className="mt-8 ml-auto lg:w-1/2 sm:w-3/5 w-full">
+        <ul className="lg:text-3xl sm:text-2xl text-xl list-disc grid gap-1 ml-5 ">
           {listItem.map((item, i) => (
             <motion.li
               key={i}
@@ -56,10 +59,13 @@ const HomePage = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.5 }}
-          className="lg:text-2xl sm:text-xl text-md mt-8"
+          className="lg:text-xl sm:text-lg text-md mt-4"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur praesentium repudiandae ex, Earum, nam
-          expedita!
+          We offer a wide range of products, from fashionable clothing and
+          accessories to unique home items. At Shopy Chnopy, we strive to
+          provide you with the best products at affordable prices, with fast
+          delivery and excellent customer service. Discover the world of
+          shopping with us and enjoy every purchase!
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -67,7 +73,11 @@ const HomePage = () => {
           transition={{ delay: 2.8, duration: 0.5 }}
         >
           <Link href={navPaths.CATALOG}>
-            <Button className="mt-8 sm:text-xl flex items-center text-md" Icon={MoveRight} sizeIcon={30}>
+            <Button
+              className="mt-8 sm:text-xl flex items-center text-md"
+              Icon={MoveRight}
+              sizeIcon={30}
+            >
               Go to Catalog
             </Button>
           </Link>

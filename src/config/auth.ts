@@ -1,6 +1,5 @@
 import { navPaths } from "@/services/navPaths";
-import { userApi } from "@/services/user/userApi";
-import { IUser } from "@/types/user.types";
+import { UserApi } from "@/shared/api/user";
 import NextAuth, { AuthOptions, DefaultSession, User } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 
@@ -22,14 +21,13 @@ export const authOptions: AuthOptions = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) return null;
 
-        const users = await userApi.fetchUsers();
-
-        const currentUser = users.find((user: IUser) => user.email === credentials.email);
-
-        if (currentUser && currentUser.password === credentials.password) {
-          const { password, ...userWithoutPass } = currentUser;
-
-          return { ...userWithoutPass } as User;
+        const user = await UserApi.loginUser({
+          login: credentials.email,
+          password: credentials.password,
+        });
+        if (user) {
+          const { password, ...userWithoutPass } = user;
+          return { ...userWithoutPass, id: String(userWithoutPass.id) } as User;
         }
 
         return null;

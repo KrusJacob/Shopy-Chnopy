@@ -1,7 +1,4 @@
-import { motion } from "framer-motion";
-import React, { useState } from "react";
-import EditorItem from "./EditorItem";
-import ProductInfo from "./ProductInfo";
+import React from "react";
 import { IProduct } from "@/types/product.type";
 import { useRouter } from "next/navigation";
 import { navPaths } from "@/services/navPaths";

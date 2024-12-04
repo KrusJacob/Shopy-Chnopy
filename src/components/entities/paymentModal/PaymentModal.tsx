@@ -28,7 +28,7 @@ const PaymentModal = ({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[500px] w-[500px] mx-1 border-2 border-redLight bg-cyan-100 md:p-8 p-2 relative flex flex-col justify-center rounded "
+        className="max-w-[500px] w-[500px] mx-1 border-2 border-primaryLight bg-cyan-100 md:p-8 p-2 relative flex flex-col justify-center rounded "
       >
         <div className="my-5">
           <div className="md:text-lg sm:text-base text-sm my-2">

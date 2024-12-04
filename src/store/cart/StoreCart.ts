@@ -1,7 +1,3 @@
-import Cart from "@/components/header/Cart";
-import { userApi } from "@/services/user/userApi";
-import { IProduct } from "@/types/product.type";
-
 import { create } from "zustand";
 
 type InCart = {
@@ -13,7 +9,7 @@ type InCart = {
 type Store = {
   productsId: InCart[];
 
-  addProductToCart: (productID: number, userId: string) => void;
+  addProductToCart: (productID: number) => void;
   removeProductToCart: (productID: number, userId: string) => void;
   setProductCart: (products: InCart[]) => void;
   excludeProductCart: (productID: number) => void;
@@ -23,19 +19,28 @@ type Store = {
 export const useCartStore = create<Store>((set) => ({
   productsId: [],
 
-  addProductToCart: (productId, userId) =>
+  addProductToCart: (productId) =>
     set((state) => {
-      userApi.setProductCart([...state.productsId, { id: productId, selected: true }], userId);
-      return { ...state, productsId: [...state.productsId, { id: productId, selected: true }] };
+      return {
+        ...state,
+        productsId: [...state.productsId, { id: productId, selected: true }],
+      };
     }),
   removeProductToCart: (productId, userId) =>
     set((state) => {
-      userApi.setProductCart([...state.productsId.filter((item) => item.id !== productId)], userId);
-      return { ...state, productsId: [...state.productsId.filter((item) => item.id !== productId)] };
+      return {
+        ...state,
+        productsId: [
+          ...state.productsId.filter((item) => item.id !== productId),
+        ],
+      };
     }),
 
   setProductCart: (products) =>
-    set((state) => ({ ...state, productsId: products.map((item) => ({ ...item, selected: true })) })),
+    set((state) => ({
+      ...state,
+      productsId: products.map((item) => ({ ...item, selected: true })),
+    })),
   excludeProductCart: (id) =>
     set((state) => ({
       ...state,

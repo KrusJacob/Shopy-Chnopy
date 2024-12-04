@@ -19,11 +19,19 @@ const CategoryItem = (props: ICategoryItemProps) => {
       key={category.id}
       onClick={() => changeCategory(category.id.toString())}
       className={`group relative text-white md:text-2xl text-sm border-4 ${
-        currentCategory === category.id.toString() ? "border-greenDark" : "border-white"
-      } brightness-90 hover:brightness-110 duration-200 cursor-pointer rounded-md overflow-hidden`}
+        currentCategory === category.id.toString()
+          ? "border-greenDark"
+          : "border-white"
+      }  brightness-90 hover:brightness-110 duration-200 cursor-pointer rounded-md overflow-hidden`}
     >
-      <span className="absolute bottom-1 left-2 group-hover:bottom-4 duration-200 ease-in">{category.name}</span>
-      <img src={category.image} alt={category.image} className="w-[var(--categoryItem)] h-[var(--categoryItem)]" />
+      <span className="absolute bottom-1 left-2 group-hover:bottom-4 duration-200 ease-in">
+        {category.name}
+      </span>
+      <img
+        src={category.image}
+        alt={category.image}
+        className="w-[var(--categoryItem)] h-[var(--categoryItem)]"
+      />
     </motion.div>
   );
 };

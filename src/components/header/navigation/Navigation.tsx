@@ -3,21 +3,25 @@ import { navPaths } from "@/services/navPaths";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
-import Cart from "./Cart";
+import Cart from "../Cart";
 import { signOut, useSession } from "next-auth/react";
 import { LogIn, LogOut } from "lucide-react";
 
 import HamburgerMenu from "./HamburgerMenu";
 import Image from "next/image";
 import { useToast } from "@/hooks/useToast";
-import Logo from "./Logo";
+import Logo from "../Logo";
 
 const navItems = [
   { label: "Catalog", path: navPaths.CATALOG, disabled: false },
   { label: "Admin", path: navPaths.ADMIN, disabled: true },
 ];
 
-const navSigninLink = { label: "Signin", path: navPaths.SIGNIN, disabled: false };
+const navSigninLink = {
+  label: "Signin",
+  path: navPaths.SIGNIN,
+  disabled: false,
+};
 const navLogoutLink = {
   label: "Logout",
   path: navPaths.CATALOG,
@@ -36,7 +40,9 @@ const Navigation = () => {
 
   return (
     <div className={styles.navigation}>
-      <HamburgerMenu navItems={[...navItems, session.data ? navLogoutLink : navSigninLink]} />
+      <HamburgerMenu
+        navItems={[...navItems, session.data ? navLogoutLink : navSigninLink]}
+      />
 
       <div className="md:flex hidden gap-8">
         <Logo />
@@ -44,7 +50,11 @@ const Navigation = () => {
           {navItems.map((item) => {
             if (!item.disabled)
               return (
-                <Link key={item.label} className={styles.underline} href={item.path}>
+                <Link
+                  key={item.label}
+                  className={styles.underline}
+                  href={item.path}
+                >
                   {item.label}
                 </Link>
               );

@@ -1,26 +1,24 @@
 "use client";
 import Loader from "@/components/UI/loader/Loader";
-import { categoryApi } from "@/services/category/categoryApi";
 import { useCategoryStore } from "@/store/category/storeCategory";
 import { ICategory } from "@/types/product.type";
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
-
 import CategoryItem from "./CategoryItem";
 
-const CategoriesList = () => {
+const CategoriesList = ({
+  categories,
+  isLoading,
+}: {
+  categories: ICategory[];
+  isLoading: boolean;
+}) => {
   const currentCategory = useCategoryStore((state) => state.category);
   const changeCategory = useCategoryStore((state) => state.changeCategory);
 
-  const { data: categories = [], isLoading } = useQuery({
-    queryKey: ["categories"],
-    queryFn: () => categoryApi.fetchCategories(),
-  });
-
   return (
-    <div className="flex flex-wrap md:gap-4 gap-2 justify-start ">
+    <div className="max-w-[1040px] m-auto flex flex-wrap md:gap-4 gap-2">
       <div
-        className={`w-[var(--categoryItem)] h-[var(--categoryItem)] box-content bg-redLight border- border-4 border-white flex justify-center items-center md:text-3xl text-lg text-white rounded-md`}
+        className={`w-[var(--categoryItem)] h-[var(--categoryItem)] box-content bg-primaryLight border- border-4 border-white flex justify-center items-center md:text-3xl text-lg text-white rounded-md`}
       >
         Categories
       </div>
@@ -37,7 +35,7 @@ const CategoriesList = () => {
           );
         })
       ) : (
-        <div>
+        <div className="flex justify-center items-center w-full h-[var(--categoryItem)]">
           <Loader />
         </div>
       )}

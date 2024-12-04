@@ -1,25 +1,34 @@
 import { IProduct, IProductType } from "@/types/product.type";
-
 import React, { ReactNode } from "react";
 import { FC } from "react";
-import CatalogItem from "./CatalogItem";
-import AdminItem from "./AdminItem";
-import CartItem from "./CartItem";
+import AdminItem from "./adminProduct/AdminItem";
+import CartItem from "./cartProduct/CartItem";
 import { motion } from "framer-motion";
+import CatalogItem from "./catalogProduct/CatalogItem";
 
 type IProductItemProps = {
   product: IProduct;
   type: IProductType;
   checked?: boolean;
   quantity?: number;
+  isProductInCart?: boolean;
 };
 
-const ProductItem: FC<IProductItemProps> = ({ product, checked, type, quantity }) => {
+const ProductItem: FC<IProductItemProps> = ({
+  product,
+  checked,
+  type,
+  quantity,
+  isProductInCart,
+}) => {
   switch (type) {
     case "Default":
       return (
         <WrapperItem>
-          <CatalogItem product={product} />
+          <CatalogItem
+            product={product}
+            isProductInCart={isProductInCart || false}
+          />
         </WrapperItem>
       );
     case "InAdmin":
