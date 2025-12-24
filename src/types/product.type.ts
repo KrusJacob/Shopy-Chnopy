@@ -1,5 +1,5 @@
 export interface IProduct {
-  id: number;
+  id: string;
   title: string;
   price: number;
   description: string;
@@ -31,7 +31,7 @@ export type ISortingFilter = "popular" | "rating" | "min" | "max";
 export type InCart = {
   selected?: boolean;
   quantity?: number;
-  id: number;
+  id: string;
 };
 
 export type IProductsInCart = IProduct & InCart;

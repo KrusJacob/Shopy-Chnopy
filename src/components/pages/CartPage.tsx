@@ -1,12 +1,22 @@
 "use client";
 import PaymentModal from "@/components/entities/paymentModal/PaymentModal";
 import { getTotalAmount } from "@/helpers/getTotalAmount";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CartTotalPrice from "../entities/cart/CartTotalPrice";
 import CartProductList from "../entities/cart/CartProductList";
 import useProductCart from "../entities/cart/useProductCart";
+import { redirect } from "next/navigation";
+import { navPaths } from "@/services/navPaths";
+import { useUser } from "@/hooks/useUser";
 
 const CartPage = () => {
+  const { isAuth } = useUser();
+
+  useEffect(() => {
+    if (!isAuth) {
+      redirect(navPaths.SIGNIN);
+    }
+  }, [isAuth]);
   const [isShowModal, setShowModal] = useState(false);
   const { productsCart, isLoading } = useProductCart();
 

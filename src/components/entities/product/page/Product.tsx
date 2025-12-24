@@ -13,7 +13,7 @@ import { useCartStore } from "@/store/cart/StoreCart";
 
 const Product = ({ product }: { product: IProduct }) => {
   const [isShowModal, setIsShowModal] = useState<boolean>(false);
-  const productsInCart = useCartStore((state) => state.productsId);
+  const productsInCart = useCartStore((state) => state.productsCart);
 
   const isProductInCart = !!productsInCart.find(
     (item) => item.id === product.id

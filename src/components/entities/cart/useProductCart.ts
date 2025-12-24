@@ -1,10 +1,9 @@
 import { ProductApi } from "@/shared/api/product";
 import { useCartStore } from "@/store/cart/StoreCart";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import React from "react";
 
 const useProductCart = () => {
-  const productsIdInCart = useCartStore((state) => state.productsId);
+  const productsIdInCart = useCartStore((state) => state.productsCart);
   const productsId = productsIdInCart.map((item) => item.id);
 
   const { data: products = [], isLoading } = useQuery({

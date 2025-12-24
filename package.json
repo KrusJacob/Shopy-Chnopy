@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"npx json-server data.json --port 3001\"",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prewiew": "next build && next start"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.60.2",
@@ -22,6 +23,7 @@
     "react-hot-toast": "^2.4.1",
     "react-loader-spinner": "^6.1.6",
     "sass": "^1.69.5",
+    "sharp": "^0.34.5",
     "swiper": "^11.0.5",
     "tailwind-merge": "^2.2.0",
     "zustand": "^4.4.7"

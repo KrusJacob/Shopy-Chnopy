@@ -1,19 +1,19 @@
 import { useToast } from "@/hooks/useToast";
+import { useUser } from "@/hooks/useUser";
 import { UserApi } from "@/shared/api/user";
 import { useCartStore } from "@/store/cart/StoreCart";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useSession } from "next-auth/react";
 
 const useRemoveProduct = () => {
-  const session = useSession();
   const queryClient = useQueryClient();
-  const products = useCartStore((state) => state.productsId);
+  const { token, localId } = useUser();
+  const products = useCartStore((state) => state.productsCart);
   const removeProductToCart = useCartStore(
     (state) => state.removeProductToCart
   );
 
   const mutation = useMutation({
-    mutationFn: UserApi.removeProductCartToUser,
+    mutationFn: UserApi.updateProductCartUser,
     onSuccess() {
       queryClient.invalidateQueries({
         queryKey: ["user"],
@@ -22,17 +22,18 @@ const useRemoveProduct = () => {
     },
   });
 
-  const handlerRemoveProduct = (productId: number) => {
-    const updatedProducts = products.filter(
-      (product) => product.id !== productId
-    );
+  const handlerRemoveProduct = (productId: string) => {
+    const updatedProductsId = products
+      .map((item) => item.id)
+      .filter((id) => id !== productId);
 
-    if (session.data) {
+    if (token && localId) {
       mutation.mutate({
-        id: session.data.user.id,
-        products: updatedProducts,
+        idToken: token,
+        localId,
+        productsId: updatedProductsId,
       });
-      removeProductToCart(productId, session.data.user.id);
+      removeProductToCart(productId);
     }
   };
   return { handlerRemoveProduct, isPending: mutation.isPending };

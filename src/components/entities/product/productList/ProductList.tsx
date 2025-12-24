@@ -1,5 +1,4 @@
 "use client";
-
 import { IProduct } from "@/types/product.type";
 import React from "react";
 import ProductItem from "../productItem/ProductItem";
@@ -7,8 +6,7 @@ import { useFilter } from "@/hooks/useFilter";
 import { useCartStore } from "@/store/cart/StoreCart";
 
 const ProductList = ({ products }: { products: IProduct[] }) => {
-  const productsInCart = useCartStore((state) => state.productsId);
-
+  const productsInCart = useCartStore((state) => state.productsCart);
   const filteredProducts = useFilter(products);
 
   return (

@@ -26,7 +26,7 @@ const Button = forwardRef<HTMLButtonElement, TypeButtonProps>(
         style={style}
         className={twMerge(
           styles.button,
-          "bg-slate-50 disabled:bg-greenLight",
+          "bg-slate-50 disabled:bg-greenLight hover:bg-greenLight",
           className
         )}
       >

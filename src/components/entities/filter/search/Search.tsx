@@ -13,7 +13,7 @@ const Search = () => {
   }, [debouncedTemp]);
 
   return (
-    <div>
+    <div className="w-full">
       <input
         value={temp}
         onChange={(e) => setTemp(e.target.value)}

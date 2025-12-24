@@ -1,5 +1,3 @@
-const BASE_URL = "https://db-shopy-chnopy.onrender.com";
-
 class ApiError extends Error {
   constructor(public response: Response) {
     super("ApiError:" + response.status);
@@ -20,7 +18,7 @@ export const jsonApiInstance = async <T>(
     init.body = JSON.stringify(init.json);
   }
 
-  const result = await fetch(`${BASE_URL}${url}`, {
+  const result = await fetch(`${url}`, {
     ...init,
     headers,
   });

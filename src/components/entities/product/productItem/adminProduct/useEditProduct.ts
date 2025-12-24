@@ -7,7 +7,7 @@ import { StateProps } from "./EditorItem";
 const useEditProduct = (setIsEditor: (is: boolean) => void) => {
   const queryClient = useQueryClient();
 
-  const mutation = useMutation({
+  const mutationUpdate = useMutation({
     mutationFn: ProductApi.updateProduct,
     onSuccess: ({ id }) => {
       queryClient.invalidateQueries({
@@ -23,6 +23,22 @@ const useEditProduct = (setIsEditor: (is: boolean) => void) => {
     },
   });
 
+  const mutationDelete = useMutation({
+    mutationFn: ProductApi.deleteProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: [ProductApi.baseKey],
+      });
+      useToast.productDeleted();
+    },
+    onSettled: () => {
+      setIsEditor(false);
+    },
+    onError: (error) => {
+      useToast.error();
+    },
+  });
+
   const handlerSaveProduct = (product: IProduct, chandedValue: StateProps) => {
     const { discountValue, price, ...preparedProductValues } = chandedValue;
     const chandedProduct = {
@@ -31,10 +47,19 @@ const useEditProduct = (setIsEditor: (is: boolean) => void) => {
       price: +price,
       discount: { value: +chandedValue.discountValue },
     };
-    mutation.mutate(chandedProduct);
+    mutationUpdate.mutate(chandedProduct);
   };
 
-  return { handlerSaveProduct, isPending: mutation.isPending };
+  const handlerDeleteProduct = (productId: string) => {
+    mutationDelete.mutate(productId);
+  };
+
+  return {
+    handlerSaveProduct,
+    isPendingEdit: mutationUpdate.isPending,
+    handlerDeleteProduct,
+    isPendingDelete: mutationDelete.isPending,
+  };
 };
 
 export default useEditProduct;
