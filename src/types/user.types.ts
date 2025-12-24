@@ -1,8 +1,12 @@
-import { IProduct, IProductsInCart, InCart } from "./product.type";
-
-export interface IUser {
-  id?: number;
-  email: string;
-  password: string;
-  productsInCart: InCart[];
+export interface FirestoreUserDoc {
+  fields?: {
+    role: { stringValue: "admin" | "user" };
+    productsCart: {
+      arrayValue?: {
+        values?: {
+          stringValue: string;
+        }[];
+      };
+    };
+  };
 }

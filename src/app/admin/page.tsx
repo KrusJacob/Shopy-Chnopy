@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: "Admin Page",
 };
 
-const pageAdmin = () => {
+const PageAdmin = () => {
   return <AdminPage />;
 };
 
-export default pageAdmin;
+export default PageAdmin;

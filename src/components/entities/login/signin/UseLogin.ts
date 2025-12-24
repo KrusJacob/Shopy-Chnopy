@@ -1,12 +1,16 @@
 import { useToast } from "@/hooks/useToast";
 import { navPaths } from "@/services/navPaths";
-import { signIn } from "next-auth/react";
+import { useAuthStore } from "@/store/auth/storeAuth";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
+
+const API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 
 const UseLogin = () => {
   const [error, setError] = useState(false);
   const router = useRouter();
+
+  const login = useAuthStore((state) => state.login);
 
   useEffect(() => {
     const timeError = setTimeout(() => {
@@ -16,22 +20,21 @@ const UseLogin = () => {
     return () => clearTimeout(timeError);
   }, [error]);
 
-  const handlerSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handlerSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    const res = await signIn("credentials", {
-      email: String(formData.get("email")).toLocaleLowerCase(),
-      password: formData.get("password"),
-      redirect: false,
-    });
-
-    if (res && !res.error) {
-      router.push(navPaths.CATALOG);
-      useToast.loginIn();
-    } else {
-      setError(true);
-    }
+    login({
+      email: String(formData.get("email")),
+      password: String(formData.get("password")),
+    })
+      .then(() => {
+        router.push(navPaths.CATALOG);
+        useToast.loginIn();
+      })
+      .catch(() => {
+        setError(true);
+      });
   };
 
   return { handlerSubmit, error };

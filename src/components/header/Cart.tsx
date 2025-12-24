@@ -4,19 +4,21 @@ import React, { useEffect } from "react";
 import { ShoppingBasket } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { navPaths } from "@/services/navPaths";
-import useUser from "./navigation/useUser";
+import { useUser } from "@/hooks/useUser";
+import { useAuthStore } from "@/store/auth/storeAuth";
 
 const Cart = () => {
   const setProductCart = useCartStore((state) => state.setProductCart);
+  const productsCart = useCartStore((state) => state.productsCart);
+  const productsIdCart = useAuthStore((state) => state.productsIdCart);
   const router = useRouter();
-
-  const { currentUser, isSuccess } = useUser();
+  const { isAuth } = useUser();
 
   useEffect(() => {
-    if (isSuccess && currentUser) {
-      setProductCart(currentUser.productsInCart);
+    if (isAuth) {
+      setProductCart(productsIdCart || []);
     }
-  }, [isSuccess]);
+  }, [isAuth, productsIdCart]);
 
   return (
     <div
@@ -28,7 +30,7 @@ const Cart = () => {
         className="cursor-pointer hover:scale-125 duration-200"
       />
       <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-grayDark text-white flex justify-center items-center rounded-full cursor-default animate-zoomIn">
-        <span>{currentUser?.productsInCart.length || 0}</span>
+        <span>{(isAuth && productsCart?.length) || 0}</span>
       </div>
     </div>
   );

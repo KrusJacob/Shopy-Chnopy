@@ -3,48 +3,51 @@ import { create } from "zustand";
 type InCart = {
   selected?: boolean;
   quantity?: number;
-  id: number;
+  id: string;
 };
 
 type Store = {
-  productsId: InCart[];
+  productsCart: InCart[];
 
-  addProductToCart: (productID: number) => void;
-  removeProductToCart: (productID: number, userId: string) => void;
-  setProductCart: (products: InCart[]) => void;
-  excludeProductCart: (productID: number) => void;
-  changeQuantityProduct: (productId: number, quantity: number) => void;
+  addProductToCart: (productID: string) => void;
+  removeProductToCart: (productID: string) => void;
+  setProductCart: (productsId: string[]) => void;
+  excludeProductCart: (productID: string) => void;
+  changeQuantityProduct: (productId: string, quantity: number) => void;
 };
 
 export const useCartStore = create<Store>((set) => ({
-  productsId: [],
+  productsCart: [],
 
   addProductToCart: (productId) =>
     set((state) => {
       return {
-        ...state,
-        productsId: [...state.productsId, { id: productId, selected: true }],
+        productsCart: [
+          ...state.productsCart,
+          { id: productId, selected: true },
+        ],
       };
     }),
-  removeProductToCart: (productId, userId) =>
+  removeProductToCart: (productId) =>
     set((state) => {
       return {
-        ...state,
-        productsId: [
-          ...state.productsId.filter((item) => item.id !== productId),
+        productsCart: [
+          ...state.productsCart.filter((item) => item.id !== productId),
         ],
       };
     }),
 
-  setProductCart: (products) =>
+  setProductCart: (productsId) =>
     set((state) => ({
-      ...state,
-      productsId: products.map((item) => ({ ...item, selected: true })),
+      productsCart: productsId.map((id) => ({
+        id,
+        selected: true,
+        quantity: 1,
+      })),
     })),
   excludeProductCart: (id) =>
     set((state) => ({
-      ...state,
-      productsId: state.productsId.map((item) => {
+      productsCart: state.productsCart.map((item) => {
         if (item.id === id) {
           item.selected = !Boolean(item.selected);
         }
@@ -54,8 +57,7 @@ export const useCartStore = create<Store>((set) => ({
 
   changeQuantityProduct: (productId, quantity) => {
     set((state) => ({
-      ...state,
-      productsId: state.productsId.map((item) => {
+      productsCart: state.productsCart.map((item) => {
         if (item.id === productId) {
           return { ...item, quantity: quantity };
         }

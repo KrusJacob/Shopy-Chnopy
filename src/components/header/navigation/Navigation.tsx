@@ -1,16 +1,13 @@
 "use client";
 import { navPaths } from "@/services/navPaths";
 import Link from "next/link";
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
 import Cart from "../Cart";
-import { signOut, useSession } from "next-auth/react";
 import { LogIn, LogOut } from "lucide-react";
-
 import HamburgerMenu from "./HamburgerMenu";
-import Image from "next/image";
-import { useToast } from "@/hooks/useToast";
 import Logo from "../Logo";
+import { useAuthStore } from "@/store/auth/storeAuth";
 
 const navItems = [
   { label: "Catalog", path: navPaths.CATALOG, disabled: false },
@@ -26,28 +23,53 @@ const navLogoutLink = {
   label: "Logout",
   path: navPaths.CATALOG,
   disabled: false,
-  callback: () => signOut().then((a) => useToast.logOff()),
 };
 
 const Navigation = () => {
-  const session = useSession();
+  const [items, setItems] = useState(navItems);
+  const [hydrated, setHydrated] = useState(false);
+  const {
+    token: isAuth,
+    logout,
+    role,
+    getUserData,
+  } = useAuthStore((state) => state);
 
   useEffect(() => {
-    if (session.data && +session.data?.user.id === 1) {
-      navItems.find((item) => item.path === navPaths.ADMIN)!.disabled = false;
-    }
-  }, [session]);
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isAuth) return;
+
+    getUserData();
+  }, [isAuth]);
+
+  useEffect(() => {
+    setItems((prev) =>
+      prev.map((item) =>
+        item.path === navPaths.ADMIN
+          ? { ...item, disabled: role !== "admin" }
+          : item
+      )
+    );
+  }, [role]);
 
   return (
     <div className={styles.navigation}>
       <HamburgerMenu
-        navItems={[...navItems, session.data ? navLogoutLink : navSigninLink]}
+        navItems={[
+          ...items,
+          isAuth
+            ? { ...navLogoutLink, callback: () => logout() }
+            : navSigninLink,
+        ]}
       />
 
       <div className="md:flex hidden gap-8">
         <Logo />
         <nav className="flex gap-8">
-          {navItems.map((item) => {
+          {items.map((item) => {
             if (!item.disabled)
               return (
                 <Link
@@ -63,10 +85,10 @@ const Navigation = () => {
       </div>
 
       <div className="items-center gap-8 ml-auto md:flex hidden">
-        {session.data ? (
+        {isAuth && hydrated ? (
           <Link
             className={styles.underline}
-            onClick={() => signOut().then((a) => useToast.logOff())}
+            onClick={() => logout()}
             href={navPaths.CATALOG}
           >
             <span>Logout</span>

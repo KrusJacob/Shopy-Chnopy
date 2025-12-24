@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React from "react";
 import { ArrowLeft } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,7 +15,11 @@ import { ProductApi } from "@/shared/api/product";
 const ProductSinglePage = ({ id }: { id: string }) => {
   const router = useRouter();
 
-  const { data: product, isLoading } = useQuery({
+  const {
+    data: product,
+    isLoading,
+    isError,
+  } = useQuery({
     ...ProductApi.getProductByID(id),
   });
 
@@ -24,8 +28,9 @@ const ProductSinglePage = ({ id }: { id: string }) => {
       <Button Icon={ArrowLeft} onClick={() => router.back()}>
         Back
       </Button>
-
-      {!isLoading && product ? <Product product={product} /> : <Loader />}
+      {isError && <p>Product not found</p>}
+      {isLoading && <Loader />}
+      {!isLoading && product && <Product product={product} />}
     </div>
   );
 };

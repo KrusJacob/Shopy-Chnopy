@@ -1,19 +1,19 @@
 import { navPaths } from "@/services/navPaths";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Rating from "./Rating";
 import { AnimatePresence } from "framer-motion";
 import FeedBackProductForm from "./FeedBackProductForm";
 import { IProduct } from "@/types/product.type";
+import { useUser } from "@/hooks/useUser";
 
 const ProductRating = ({ product }: { product: IProduct }) => {
-  const session = useSession();
   const [isFeedback, setIsFeedback] = useState<boolean>(false);
   const router = useRouter();
+  const { isAuth } = useUser();
 
   const onVoteToProduct = () => {
-    if (session.data) {
+    if (isAuth) {
       setIsFeedback(!isFeedback);
     } else router.push(navPaths.SIGNIN);
   };

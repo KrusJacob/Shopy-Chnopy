@@ -1,53 +1,105 @@
-import { IUser } from "@/types/user.types";
+import { FirestoreUserDoc } from "@/types/user.types";
 import { jsonApiInstance } from "./api-instance";
-import { InCart } from "@/types/product.type";
+
+const API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+const PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
 
 export const UserApi = {
-  fetchUsers: () => {
-    return jsonApiInstance<IUser[]>(`/users`, {
-      method: "GET",
-    });
+  createUser: async (email: string, password: string) => {
+    return jsonApiInstance<{ localId: string; idToken: string }>(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
+      {
+        method: "POST",
+        json: {
+          email,
+          password,
+          returnSecureToken: true,
+        },
+      }
+    );
   },
-  createUser: (data: IUser) => {
-    return jsonApiInstance<IUser>(`/users`, {
-      method: "POST",
-      json: data,
-    });
+  createUserDoc: async (localId: string, idToken: string, email: string) => {
+    return jsonApiInstance(
+      `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/users?documentId=${localId}`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${idToken}` },
+        json: {
+          fields: {
+            email: { stringValue: email },
+            role: { stringValue: "user" },
+            productsCart: { arrayValue: { values: [] } },
+          },
+        },
+      }
+    );
   },
-  getUser: (id: string) => {
-    return jsonApiInstance<IUser>(`/users/${id}`, {
-      method: "GET",
-    });
+
+  getUserData: async (localId: string, idToken: string) => {
+    try {
+      const data = await jsonApiInstance<FirestoreUserDoc>(
+        `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/users/${localId}`,
+        {
+          method: "GET",
+          headers: { Authorization: `Bearer ${idToken}` },
+        }
+      );
+      const role = data.fields?.role?.stringValue;
+      const productsCart =
+        data.fields?.productsCart?.arrayValue?.values?.map(
+          (v) => v.stringValue
+        ) ?? [];
+      return { role, productsCart };
+    } catch (error) {
+      // localStorage.removeItem("auth-store");
+      throw new Error("User is not authorized");
+    }
   },
-  loginUser: ({ login, password }: { login: string; password: string }) => {
-    return jsonApiInstance<IUser[]>(
-      `/users?login=${login}&password=${password}`
-    ).then((r) => r[0] as IUser | undefined);
-  },
-  addProductCartToUser: async ({
-    id,
-    products,
-    newProduct,
+  loginUser: async ({
+    email,
+    password,
   }: {
-    id: string;
-    products: InCart[];
-    newProduct: InCart;
+    email: string;
+    password: string;
   }) => {
-    return jsonApiInstance(`/users/${id}`, {
-      method: "PATCH",
-      json: { productsInCart: [...products, newProduct] },
-    });
+    return jsonApiInstance<{ localId: string; idToken: string }>(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
+      {
+        method: "POST",
+        json: {
+          email,
+          password,
+          returnSecureToken: true,
+        },
+      }
+    );
   },
-  removeProductCartToUser: async ({
-    id,
-    products,
+  updateProductCartUser: async ({
+    localId,
+    idToken,
+    productsId,
   }: {
-    id: string;
-    products: InCart[];
+    localId: string;
+    idToken: string;
+    productsId: string[];
   }) => {
-    return jsonApiInstance(`/users/${id}`, {
-      method: "PATCH",
-      json: { productsInCart: products },
-    });
+    return jsonApiInstance(
+      `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/users/${localId}?updateMask.fieldPaths=productsCart`,
+      {
+        method: "PATCH",
+        headers: { Authorization: `Bearer ${idToken}` },
+        json: {
+          fields: {
+            productsCart: {
+              arrayValue: {
+                values: productsId.map((id) => ({
+                  stringValue: id,
+                })),
+              },
+            },
+          },
+        },
+      }
+    );
   },
 };

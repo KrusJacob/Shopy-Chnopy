@@ -32,7 +32,12 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
     }));
   };
 
-  const { handlerSaveProduct, isPending } = useEditProduct(setIsEditor);
+  const {
+    handlerSaveProduct,
+    isPendingEdit,
+    handlerDeleteProduct,
+    isPendingDelete,
+  } = useEditProduct(setIsEditor);
 
   return (
     <>
@@ -92,9 +97,23 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           </div>
         </div>
 
-        <Button isLoading={isPending} className="mt-6 md:max-w-[250px]">
-          Save
-        </Button>
+        <div className="flex justify-between mt-6">
+          <Button
+            type="submit"
+            isLoading={isPendingEdit}
+            className="md:max-w-[250px]"
+          >
+            Save
+          </Button>
+          <Button
+            type="button"
+            onClick={() => handlerDeleteProduct(product.id)}
+            isLoading={isPendingDelete}
+            className="md:max-w-[250px] text-red-600 hover:bg-red-600"
+          >
+            Delete Product
+          </Button>
+        </div>
       </form>
     </>
   );

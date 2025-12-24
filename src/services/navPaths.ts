@@ -5,4 +5,5 @@ export enum navPaths {
   SIGNIN = "/signin",
   REGISTRATION = "registration",
   ADMIN = "/admin",
+  ADMIN_NEW = "/admin/new",
 }
