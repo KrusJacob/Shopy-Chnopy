@@ -1,52 +1,29 @@
 "use client";
-import useDebounce from "@/hooks/useDebounce";
+import { Slider } from "@/components/UI/slider/Slider";
+import { MAX_PRICE_RANGE } from "@/constant";
 import { useSortStore } from "@/store/sorting/storeSort";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const FilterPrice = () => {
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-
-  const changeMinPrice = useSortStore((state) => state.changeMinPrice);
-  const changeMaxPirce = useSortStore((state) => state.changeMaxPirce);
-  const debouncedMinPrice = useDebounce(minPrice);
-  const debouncedMaxPrice = useDebounce(maxPrice);
-
-  useEffect(() => {
-    changeMinPrice(debouncedMinPrice);
-  }, [debouncedMinPrice]);
-
-  useEffect(() => {
-    changeMaxPirce(debouncedMaxPrice);
-  }, [debouncedMaxPrice]);
+  const rangePrice = useSortStore((state) => state.rangePrice);
+  const changeRangePrice = useSortStore((state) => state.changeRangePrice);
 
   return (
-    <div className="mt-5">
-      <label htmlFor="#filter" className="text-2xl font-medium">
+    <div>
+      <label htmlFor="#filter" className="text-xl font-medium mb-2">
         Price
       </label>
-      <div
-        id="filter"
-        className="grid grid-cols-2 items-center gap-2 w-full mt-2 "
-      >
-        <input
-          value={minPrice}
-          onChange={(e) => setMinPrice(e.target.value)}
-          type="number"
-          min="0"
-          max="9999"
-          placeholder="min"
-          className="px-4 py-2 text-xl"
-        />
-        <input
-          value={maxPrice}
-          onChange={(e) => setMaxPrice(e.target.value)}
-          type="number"
-          min="0"
-          max="9999"
-          placeholder="max"
-          className="px-4 py-2 text-xl"
-        />
+      <Slider
+        value={rangePrice}
+        min={0}
+        max={MAX_PRICE_RANGE}
+        step={10}
+        onValueChange={changeRangePrice}
+        className="py-2"
+      />
+      <div className="flex items-center justify-between text-sm text-muted-foreground">
+        <span>${rangePrice[0]}</span>
+        <span>${rangePrice[1]}</span>
       </div>
     </div>
   );

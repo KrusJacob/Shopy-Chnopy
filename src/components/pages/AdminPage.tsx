@@ -30,9 +30,13 @@ const AdminPage = () => {
 
   return (
     <div className="min-h-screen px-2">
-      <div className="flex justify-between items-center gap-4">
+      <div className="flex justify-between items-end gap-4">
         <Search />
-        <Button Icon={Plus} onClick={() => router.push(navPaths.ADMIN_NEW)}>
+        <Button
+          className="py-1.5"
+          Icon={Plus}
+          onClick={() => router.push(navPaths.ADMIN_NEW)}
+        >
           New product
         </Button>
       </div>

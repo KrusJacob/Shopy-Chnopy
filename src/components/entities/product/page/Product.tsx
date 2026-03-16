@@ -21,6 +21,8 @@ const Product = ({ product }: { product: IProduct }) => {
 
   const { handlerAddProduct, IsLoading } = useProductCart();
 
+  console.log(isProductInCart, productsInCart, product.id);
+
   return (
     <div className="grid md:grid-cols-2 justify-center   gap-2 m-auto mt-5">
       <ProductImage product={product} />

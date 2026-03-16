@@ -16,9 +16,9 @@ const CategoriesList = ({
   const changeCategory = useCategoryStore((state) => state.changeCategory);
 
   return (
-    <div className="max-w-[1040px] m-auto flex flex-wrap md:gap-4 gap-2">
+    <div className="max-w-400 m-auto flex flex-wrap md:gap-4 gap-2">
       <div
-        className={`w-[var(--categoryItem)] h-[var(--categoryItem)] box-content bg-primaryLight border- border-4 border-white flex justify-center items-center md:text-3xl text-lg text-white rounded-md`}
+        className={`w-(--categoryItem) h-(--categoryItem) box-content bg-primaryLight border- border-4 border-white flex justify-center items-center md:text-3xl text-lg text-white rounded-md`}
       >
         Categories
       </div>
@@ -35,7 +35,7 @@ const CategoriesList = ({
           );
         })
       ) : (
-        <div className="flex justify-center items-center w-full h-[var(--categoryItem)]">
+        <div className="flex justify-center items-center w-full h-(--categoryItem)">
           <Loader />
         </div>
       )}

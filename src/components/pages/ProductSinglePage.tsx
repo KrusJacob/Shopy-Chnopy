@@ -22,9 +22,10 @@ const ProductSinglePage = ({ id }: { id: string }) => {
   } = useQuery({
     ...ProductApi.getProductByID(id),
   });
+  console.log(product);
 
   return (
-    <div className="max-w-[1200px] m-auto px-2">
+    <div className="max-w-300 m-auto px-2">
       <Button Icon={ArrowLeft} onClick={() => router.back()}>
         Back
       </Button>

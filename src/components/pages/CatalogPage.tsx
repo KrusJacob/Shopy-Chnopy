@@ -19,7 +19,7 @@ const CatalogPage = () => {
           <CatalogProduct />
         </div>
       )}
-      {isFetched && (
+      {!category && (
         <div className="text-center mt-8 text-3xl font-medium">
           Select category
         </div>

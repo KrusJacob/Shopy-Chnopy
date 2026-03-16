@@ -32,6 +32,9 @@ export const ProductApi = {
         jsonApiInstance<IProduct>(`${PRODUCTS_URL}/${id}.json`, {
           signal: meta.signal,
         }),
+      select: (data) => {
+        return { ...data, id: id };
+      },
     });
   },
   getProductListById: async (productsId: string[]) => {

@@ -10,21 +10,26 @@ const ProductList = ({ products }: { products: IProduct[] }) => {
   const filteredProducts = useFilter(products);
 
   return (
-    <div className="flex flex-wrap border-l border-r border-grayDark mt-2 px-2">
-      {filteredProducts.map((product: IProduct) => {
-        const isProductInCart = !!productsInCart.find(
-          (item) => item.id === product.id
-        );
-        return (
-          <ProductItem
-            isProductInCart={isProductInCart}
-            key={product.id}
-            product={product}
-            type="Default"
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 mt-2 ">
+        {filteredProducts.map((product: IProduct) => {
+          const isProductInCart = !!productsInCart.find(
+            (item) => item.id === product.id
+          );
+          return (
+            <ProductItem
+              isProductInCart={isProductInCart}
+              key={product.id}
+              product={product}
+              type="Default"
+            />
+          );
+        })}
+      </div>
+      {!filteredProducts.length && (
+        <div className="text-2xl  text-center mt-8">No products found</div>
+      )}
+    </>
   );
 };
 

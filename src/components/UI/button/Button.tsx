@@ -2,7 +2,7 @@ import { TypeButtonProps } from "@/types/button.types";
 import { TailSpin } from "react-loader-spinner";
 import { twMerge } from "tailwind-merge";
 import React, { forwardRef } from "react";
-import styles from "./Button.module.scss";
+// import styles from "./Button.module.css";
 
 const Button = forwardRef<HTMLButtonElement, TypeButtonProps>(
   (
@@ -25,8 +25,7 @@ const Button = forwardRef<HTMLButtonElement, TypeButtonProps>(
         {...rest}
         style={style}
         className={twMerge(
-          styles.button,
-          "bg-slate-50 disabled:bg-greenLight hover:bg-greenLight",
+          "px-4 py-2 border min-w-max border-grayDark rounded-md font-medium flex justify-center gap-2 shadow-lg hover:shadow-inner   duration-200 hover:text-white  disabled:pointer-events-none bg-slate-50 disabled:bg-greenLight hover:bg-greenLight",
           className
         )}
       >

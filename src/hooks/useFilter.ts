@@ -4,8 +4,8 @@ import { IProduct } from "@/types/product.type";
 export const useFilter = (products: IProduct[]) => {
   const temp = useSortStore((state) => state.temp);
   const sort = useSortStore((state) => state.sort);
-  const minPrice = useSortStore((state) => state.minPrice);
-  const maxPrice = useSortStore((state) => state.maxPrice);
+
+  const rangePrice = useSortStore((state) => state.rangePrice);
 
   const getFilteredProducts = () => {
     let filteredProducts = [];
@@ -37,17 +37,16 @@ export const useFilter = (products: IProduct[]) => {
         })
         .reverse();
     }
-
-    //minPrice|maxPrice
+    //rangePrice
     filteredProducts = filteredProducts.filter((item: IProduct) => {
-      if (minPrice && maxPrice) {
-        return item.price > minPrice && item.price < maxPrice;
+      if (rangePrice[0] && rangePrice[1]) {
+        return item.price > rangePrice[0] && item.price < rangePrice[1];
       }
-      if (minPrice) {
-        return item.price > minPrice;
+      if (rangePrice[0]) {
+        return item.price > rangePrice[0];
       }
-      if (maxPrice) {
-        return item.price < maxPrice;
+      if (rangePrice[1]) {
+        return item.price < rangePrice[1];
       }
       return item;
     });

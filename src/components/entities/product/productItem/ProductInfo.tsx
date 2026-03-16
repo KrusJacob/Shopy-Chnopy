@@ -23,29 +23,22 @@ const ProductInfo = ({ product }: Props) => {
   };
 
   return (
-    <div className="flex flex-col gap-2 max-w-[800px]">
+    <div className="flex  flex-col gap-2 p-4">
       <p
         onClick={goToPageProduct}
-        className="md:text-2xl text-lg font-semibold cursor-pointer"
+        className="md:text-xl text-base font-semibold cursor-pointer"
       >
         {product.title}
       </p>
-      <div className="md:text-base text-sm">
+      <div className="md:text-sm text-xs">
         {getCutBack(product.description)}
       </div>
       <div className="flex md:flex-row flex-col md:items-center gap-4">
-        <div className="flex gap-2  text-2xl items-center font-medium">
-          <p className={`${isDiscount ? "line-through" : ""}`}>
+        <div className="flex gap-2  text-lg items-center font-medium">
+          {isDiscount && <p className="text-xl">{priceWithDiscount}$</p>}
+          <p className={`${isDiscount ? "line-through opacity-50" : ""}`}>
             {product.price}$
           </p>
-          {isDiscount && (
-            <p className="text-red-600 text-3xl">{priceWithDiscount}$</p>
-          )}
-          {isDiscount && (
-            <div className="text-white py-0.5 px-1 rounded text-xl bg-red-600">
-              -{product.discount?.value}%
-            </div>
-          )}
         </div>
         <Rating onClick={goToPageProduct} rating={product.rating} />
       </div>

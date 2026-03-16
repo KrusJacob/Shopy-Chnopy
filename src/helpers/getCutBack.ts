@@ -1,4 +1,4 @@
-export const getCutBack = (str: string, number = 55) => {
+export const getCutBack = (str: string, number = 30) => {
   let words = str.split(" ");
 
   if (words.length < number) {

@@ -5,7 +5,7 @@ import Search from "./search/Search";
 
 const Filter = () => {
   return (
-    <div className="p-2 mt-2 pb-4 border-r border-l border-b border-grayDark  ">
+    <div className="flex flex-col gap-6 p-4 mt-2 pb-6 rounded-xl backdrop-blur  ">
       <Search />
       <Sorting />
       <FilterPrice />
