@@ -1,12 +1,24 @@
 "use client";
 import { Slider } from "@/components/UI/slider/Slider";
 import { MAX_PRICE_RANGE } from "@/constant";
+import useDebounce from "@/hooks/useDebounce";
 import { useSortStore } from "@/store/sorting/storeSort";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const FilterPrice = () => {
   const rangePrice = useSortStore((state) => state.rangePrice);
+  const [previewRange, setPreviewRange] = useState(rangePrice);
   const changeRangePrice = useSortStore((state) => state.changeRangePrice);
+
+  const debouncedRange = useDebounce(previewRange, 100);
+
+  useEffect(() => {
+    changeRangePrice(debouncedRange);
+  }, [debouncedRange]);
+
+  const handleValueChange = (value: number[]) => {
+    setPreviewRange(value);
+  };
 
   return (
     <div>
@@ -14,16 +26,16 @@ const FilterPrice = () => {
         Price
       </label>
       <Slider
-        value={rangePrice}
+        value={previewRange}
         min={0}
         max={MAX_PRICE_RANGE}
         step={10}
-        onValueChange={changeRangePrice}
+        onValueChange={handleValueChange}
         className="py-2"
       />
       <div className="flex items-center justify-between text-sm text-muted-foreground">
-        <span>${rangePrice[0]}</span>
-        <span>${rangePrice[1]}</span>
+        <span>${previewRange[0]}</span>
+        <span>${previewRange[1]}</span>
       </div>
     </div>
   );

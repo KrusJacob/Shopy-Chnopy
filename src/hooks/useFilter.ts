@@ -4,7 +4,6 @@ import { IProduct } from "@/types/product.type";
 export const useFilter = (products: IProduct[]) => {
   const temp = useSortStore((state) => state.temp);
   const sort = useSortStore((state) => state.sort);
-
   const rangePrice = useSortStore((state) => state.rangePrice);
 
   const getFilteredProducts = () => {
@@ -38,17 +37,31 @@ export const useFilter = (products: IProduct[]) => {
         .reverse();
     }
     //rangePrice
+    // filteredProducts = filteredProducts.filter((item: IProduct) => {
+    //   if (rangePrice[0] && rangePrice[1]) {
+    //     return item.price > rangePrice[0] && item.price < rangePrice[1];
+    //   }
+    //   if (rangePrice[0]) {
+    //     return item.price > rangePrice[0];
+    //   }
+    //   if (rangePrice[1]) {
+    //     return item.price < rangePrice[1];
+    //   }
+    //   return item;
+    // });
+    if (!rangePrice || !Array.isArray(rangePrice)) {
+      return filteredProducts;
+    }
+
+    const [min, max] = rangePrice;
+
     filteredProducts = filteredProducts.filter((item: IProduct) => {
-      if (rangePrice[0] && rangePrice[1]) {
-        return item.price > rangePrice[0] && item.price < rangePrice[1];
-      }
-      if (rangePrice[0]) {
-        return item.price > rangePrice[0];
-      }
-      if (rangePrice[1]) {
-        return item.price < rangePrice[1];
-      }
-      return item;
+      const price = item.price || 0;
+
+      if (min != null && max != null) return price > min && price < max;
+      if (min != null) return price > min;
+      if (max != null) return price < max;
+      return true;
     });
 
     return filteredProducts;

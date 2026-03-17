@@ -14,7 +14,7 @@ type Store = {
 export const useSortStore = create<Store>((set) => ({
   temp: "",
   sort: "popular",
-  rangePrice: [0, MAX_PRICE_RANGE],
+  rangePrice: [0, MAX_PRICE_RANGE] as [number, number],
   changeTemp: (newTemp) => set(() => ({ temp: newTemp })),
   changeSort: (newSort: ISortingFilter) => set(() => ({ sort: newSort })),
   changeRangePrice: (newRangePrice) =>

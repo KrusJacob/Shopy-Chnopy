@@ -1,5 +1,5 @@
 import { IProduct, IProductType } from "@/types/product.type";
-import React, { ReactNode } from "react";
+import React, { ReactNode, memo } from "react";
 import { FC } from "react";
 import AdminItem from "./adminProduct/AdminItem";
 import CartItem from "./cartProduct/CartItem";
@@ -14,37 +14,33 @@ type IProductItemProps = {
   isProductInCart?: boolean;
 };
 
-const ProductItem: FC<IProductItemProps> = ({
-  product,
-  checked,
-  type,
-  quantity,
-  isProductInCart,
-}) => {
-  switch (type) {
-    case "Default":
-      return (
-        <WrapperItem>
-          <CatalogItem
-            product={product}
-            isProductInCart={isProductInCart || false}
-          />
-        </WrapperItem>
-      );
-    case "InAdmin":
-      return (
-        <WrapperItem>
-          <AdminItem product={product} />
-        </WrapperItem>
-      );
-    case "InCart":
-      return (
-        <WrapperItem>
-          <CartItem product={product} checked={checked} quantity={quantity} />
-        </WrapperItem>
-      );
+const ProductItem: FC<IProductItemProps> = memo(
+  ({ product, checked, type, quantity, isProductInCart }) => {
+    switch (type) {
+      case "Default":
+        return (
+          <WrapperItem>
+            <CatalogItem
+              product={product}
+              isProductInCart={isProductInCart || false}
+            />
+          </WrapperItem>
+        );
+      case "InAdmin":
+        return (
+          <WrapperItem>
+            <AdminItem product={product} />
+          </WrapperItem>
+        );
+      case "InCart":
+        return (
+          <WrapperItem>
+            <CartItem product={product} checked={checked} quantity={quantity} />
+          </WrapperItem>
+        );
+    }
   }
-};
+);
 
 const WrapperItem = ({ children }: { children: ReactNode }) => {
   return (
