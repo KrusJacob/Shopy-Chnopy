@@ -46,7 +46,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           e.preventDefault();
           handlerSaveProduct(product, productValue);
         }}
-        className="text-base  flex flex-col  w-full"
+        className="text-base  flex flex-col  w-full  p-4"
       >
         <div>
           <label htmlFor="title">Title: </label>
@@ -65,7 +65,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
             onChange={changeProductValue}
             name="description"
             value={productValue.description}
-            className="resize-none h-[110px] w-full px-2 py-1 border"
+            className="resize-none h-27.5 rounded w-full text-sm px-2 py-1 border"
           />
         </div>
         <div className="flex gap-6">
@@ -101,7 +101,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
           <Button
             type="submit"
             isLoading={isPendingEdit}
-            className="md:max-w-[250px]"
+            className="md:max-w-62.5"
           >
             Save
           </Button>
@@ -109,7 +109,7 @@ const EditorItem: FC<IEditorItemProps> = ({ product, setIsEditor }) => {
             type="button"
             onClick={() => handlerDeleteProduct(product.id)}
             isLoading={isPendingDelete}
-            className="md:max-w-[250px] text-red-600 hover:bg-red-600"
+            className="md:max-w-62.5 text-red-600 hover:bg-red-600"
           >
             Delete Product
           </Button>

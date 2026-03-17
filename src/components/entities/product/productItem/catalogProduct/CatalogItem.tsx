@@ -3,10 +3,11 @@ import ProductInfo from "../ProductInfo";
 import { IProduct } from "@/types/product.type";
 import Button from "@/components/UI/button/Button";
 import { CheckCircle, ShoppingBag, ShoppingBasket } from "lucide-react";
-import ProductItemBody from "../ProductItemBody";
+import ProductImage from "../ProductImage";
 import PaymentModal from "../../../paymentModal/PaymentModal";
 import { usePriceWithDiscount } from "@/helpers/getPriceWithDiscount";
 import useProductCart from "../../page/useProductCart";
+import Badge from "@/components/UI/badge/Badge";
 
 interface Props {
   product: IProduct;
@@ -19,12 +20,15 @@ const CatalogItem = ({ product, isProductInCart }: Props) => {
   const { handlerAddProduct, IsLoading } = useProductCart();
 
   return (
-    <>
-      <div className="flex flex-col md:flex-row gap-4">
-        <ProductItemBody product={product} />
+    <div className="flex flex-col h-full ">
+      <div className="group relative flex flex-1 flex-col gap-2 overflow-hidden  transition-all ">
+        <ProductImage product={product} />
         <ProductInfo product={product} />
+        {product.discount.value > 0 && (
+          <Badge value={`-${product.discount.value}%`} />
+        )}
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex justify-between gap-4 p-4">
         <Button
           isLoading={IsLoading}
           disabled={isProductInCart || IsLoading}
@@ -47,7 +51,7 @@ const CatalogItem = ({ product, isProductInCart }: Props) => {
           )}
         />
       )}
-    </>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ const RegistrationForm = () => {
       <h4 className="text-xl">Create new account</h4>
       <form
         onSubmit={handlerRegistration}
-        className="mt-5 flex flex-col max-w-[300px] m-auto gap-3 text-xl"
+        className="mt-5 flex flex-col max-w-75 m-auto gap-3 text-xl"
       >
         <input
           name="email"

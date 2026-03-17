@@ -5,7 +5,7 @@ import { IProduct } from "@/types/product.type";
 
 const ProductImage = ({ product }: { product: IProduct }) => {
   return (
-    <div className="max-w-[720px] relative overflow-hidden  md">
+    <div className="max-w-180 relative overflow-hidden  md">
       <Swiper
         className="absolute top-0 left-0 object-cover w-full h-full "
         slidesPerView={1}

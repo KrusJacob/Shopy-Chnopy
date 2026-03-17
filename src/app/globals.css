@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --categoryItem: 240px;
+}
+
+@theme {
+  --color-primaryLight: #329ec6;
+  --color-primaryDark: #1892bf;
+  --color-greenLight: #34d399;
+  --color-greenDark: #059669;
+  --color-grayDark: #6b7280;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --keyframes-zoomIn: {
+    from: {
+      transform: scale(1);
+    }
+    50%: {
+      transform: scale(1.25);
+    }
+    to: {
+      transform: scale(1);
+    }
+  }
+  --animation-zoomIn: zoomIn 1s ease-in-out;
+}
+
+html {
+  height: max-content;
+  min-height: 100%;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("https://abrakadabra.fun/uploads/posts/2022-01/1642401011_9-abrakadabra-fun-p-foni-dlya-prokrieit-14.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+
+
+footer {
+  flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    --categoryItem: 190px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --categoryItem: 130px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  :root {
+    --categoryItem: 110px;
+  }
+}
+
+.nav-link {
+  color: white; 
+  position: relative;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px; 
+  background-color: white; 
+  transition: width 0.4s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}

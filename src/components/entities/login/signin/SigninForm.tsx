@@ -11,7 +11,7 @@ const SigninForm = () => {
       <h4 className="text-xl">Login</h4>
       <form
         onSubmit={handlerSubmit}
-        className="flex mt-5 flex-col max-w-[300px] m-auto gap-3 text-xl"
+        className="flex mt-5 flex-col max-w-75 m-auto gap-3 text-xl"
       >
         <input
           name="email"

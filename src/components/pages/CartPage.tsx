@@ -2,7 +2,7 @@
 import PaymentModal from "@/components/entities/paymentModal/PaymentModal";
 import { getTotalAmount } from "@/helpers/getTotalAmount";
 import React, { useEffect, useState } from "react";
-import CartTotalPrice from "../entities/cart/CartTotalPrice";
+import CartHeader from "../entities/cart/CartHeader";
 import CartProductList from "../entities/cart/CartProductList";
 import useProductCart from "../entities/cart/useProductCart";
 import { redirect } from "next/navigation";
@@ -21,10 +21,17 @@ const CartPage = () => {
   const { productsCart, isLoading } = useProductCart();
 
   const totalPrice = getTotalAmount(productsCart);
+  const productsSelected = productsCart.filter((item) => item.selected).length;
+  const productsLength = productsCart.length;
 
   return (
     <div className="max-w-[1200px] m-auto">
-      <CartTotalPrice totalPrice={totalPrice} setShowModal={setShowModal} />
+      <CartHeader
+        productsSelected={productsSelected}
+        productsLength={productsLength}
+        totalPrice={totalPrice}
+        setShowModal={setShowModal}
+      />
       <CartProductList products={productsCart} isLoading={isLoading} />
       {isShowModal && (
         <PaymentModal

@@ -9,7 +9,7 @@ interface Props {
 }
 const CartProductList = ({ products, isLoading }: Props) => {
   return (
-    <div className="mt-5">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 mt-5">
       {!products?.length && !isLoading && (
         <p className="text-2xl  text-center">The cart is empty</p>
       )}

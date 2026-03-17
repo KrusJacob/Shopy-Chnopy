@@ -1,5 +1,5 @@
 import { IProduct, IProductType } from "@/types/product.type";
-import React, { ReactNode } from "react";
+import React, { ReactNode, memo } from "react";
 import { FC } from "react";
 import AdminItem from "./adminProduct/AdminItem";
 import CartItem from "./cartProduct/CartItem";
@@ -14,37 +14,33 @@ type IProductItemProps = {
   isProductInCart?: boolean;
 };
 
-const ProductItem: FC<IProductItemProps> = ({
-  product,
-  checked,
-  type,
-  quantity,
-  isProductInCart,
-}) => {
-  switch (type) {
-    case "Default":
-      return (
-        <WrapperItem>
-          <CatalogItem
-            product={product}
-            isProductInCart={isProductInCart || false}
-          />
-        </WrapperItem>
-      );
-    case "InAdmin":
-      return (
-        <WrapperItem>
-          <AdminItem product={product} />
-        </WrapperItem>
-      );
-    case "InCart":
-      return (
-        <WrapperItem>
-          <CartItem product={product} checked={checked} quantity={quantity} />
-        </WrapperItem>
-      );
+const ProductItem: FC<IProductItemProps> = memo(
+  ({ product, checked, type, quantity, isProductInCart }) => {
+    switch (type) {
+      case "Default":
+        return (
+          <WrapperItem>
+            <CatalogItem
+              product={product}
+              isProductInCart={isProductInCart || false}
+            />
+          </WrapperItem>
+        );
+      case "InAdmin":
+        return (
+          <WrapperItem>
+            <AdminItem product={product} />
+          </WrapperItem>
+        );
+      case "InCart":
+        return (
+          <WrapperItem>
+            <CartItem product={product} checked={checked} quantity={quantity} />
+          </WrapperItem>
+        );
+    }
   }
-};
+);
 
 const WrapperItem = ({ children }: { children: ReactNode }) => {
   return (
@@ -53,7 +49,7 @@ const WrapperItem = ({ children }: { children: ReactNode }) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="w-full py-2 md:px-0 px-2 flex md:flex-row flex-col gap-4 md:items-center justify-between border-b border-b-grayDark"
+      className="hover:shadow-lg border rounded-lg overflow-hidden border-black/20  bg-white/50"
     >
       {children}
     </motion.div>

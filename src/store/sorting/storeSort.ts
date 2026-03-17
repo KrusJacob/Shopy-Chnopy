@@ -1,24 +1,22 @@
+import { MAX_PRICE_RANGE } from "@/constant";
 import { ISortingFilter } from "@/types/product.type";
 import { create } from "zustand";
 
 type Store = {
   temp: string;
   sort: ISortingFilter;
-  minPrice: number | null;
-  maxPrice: number | null;
+  rangePrice: number[];
   changeTemp: (newTemp: string) => void;
   changeSort: (newSort: ISortingFilter) => void;
-  changeMinPrice: (newMinPrice: string) => void;
-  changeMaxPirce: (newMaxPrice: string) => void;
+  changeRangePrice: (newRangePrice: number[]) => void;
 };
 
 export const useSortStore = create<Store>((set) => ({
   temp: "",
   sort: "popular",
-  minPrice: null,
-  maxPrice: null,
+  rangePrice: [0, MAX_PRICE_RANGE] as [number, number],
   changeTemp: (newTemp) => set(() => ({ temp: newTemp })),
   changeSort: (newSort: ISortingFilter) => set(() => ({ sort: newSort })),
-  changeMinPrice: (newMinPrice) => set(() => ({ minPrice: +newMinPrice })),
-  changeMaxPirce: (newMaxPrice) => set(() => ({ maxPrice: +newMaxPrice })),
+  changeRangePrice: (newRangePrice) =>
+    set(() => ({ rangePrice: newRangePrice })),
 }));

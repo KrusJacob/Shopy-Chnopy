@@ -18,7 +18,7 @@ const SortInput = ({ checked, changeSort, children, sort }: IProps) => {
         type="checkbox"
         id={sort}
       />
-      <label htmlFor={sort} className="whitespace-nowrap text-lg">
+      <label htmlFor={sort} className="whitespace-nowrap text-base">
         {children}
       </label>
     </div>

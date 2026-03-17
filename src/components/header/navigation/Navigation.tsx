@@ -2,7 +2,7 @@
 import { navPaths } from "@/services/navPaths";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import styles from "./Navigation.module.scss";
+
 import Cart from "../Cart";
 import { LogIn, LogOut } from "lucide-react";
 import HamburgerMenu from "./HamburgerMenu";
@@ -56,7 +56,7 @@ const Navigation = () => {
   }, [role]);
 
   return (
-    <div className={styles.navigation}>
+    <div className="flex items-center gap-8 justify-between w-full">
       <HamburgerMenu
         navItems={[
           ...items,
@@ -72,11 +72,7 @@ const Navigation = () => {
           {items.map((item) => {
             if (!item.disabled)
               return (
-                <Link
-                  key={item.label}
-                  className={styles.underline}
-                  href={item.path}
-                >
+                <Link key={item.label} className="nav-link" href={item.path}>
                   {item.label}
                 </Link>
               );
@@ -87,7 +83,7 @@ const Navigation = () => {
       <div className="items-center gap-8 ml-auto md:flex hidden">
         {isAuth && hydrated ? (
           <Link
-            className={styles.underline}
+            className="nav-link"
             onClick={() => logout()}
             href={navPaths.CATALOG}
           >
@@ -95,7 +91,7 @@ const Navigation = () => {
             <LogOut />
           </Link>
         ) : (
-          <Link className={styles.underline} href={navPaths.SIGNIN}>
+          <Link className="nav-link" href={navPaths.SIGNIN}>
             <span>Signin</span>
             <LogIn />
           </Link>

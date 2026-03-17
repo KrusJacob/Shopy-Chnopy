@@ -67,7 +67,7 @@ export const ProductCreatePage = () => {
         />
         <label htmlFor="description">Description</label>
         <textarea
-          className="px-2 py-1 border h-32"
+          className="px-2 py-1 border h-32 rounded"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           id="description"

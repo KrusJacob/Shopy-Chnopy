@@ -26,7 +26,7 @@ const FeedBackProductForm: FC<Props> = ({ setIsFeedback, product }) => {
   return (
     <div
       onClick={() => setIsFeedback(false)}
-      className="absolute inset-0 bg-black flex justify-center items-center bg-opacity-40"
+      className="absolute inset-0 bg-black/75 flex justify-center items-center bg-opacity-40"
     >
       <motion.div
         onClick={(e) => e.stopPropagation()}

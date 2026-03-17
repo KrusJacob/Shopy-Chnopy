@@ -59,7 +59,7 @@ const HomePage = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.5 }}
-          className="lg:text-xl sm:text-lg text-md mt-4"
+          className="lg:text-xl sm:text-lg text-base mt-4"
         >
           We offer a wide range of products, from fashionable clothing and
           accessories to unique home items. At Shopy Chnopy, we strive to
@@ -74,7 +74,7 @@ const HomePage = () => {
         >
           <Link href={navPaths.CATALOG}>
             <Button
-              className="mt-8 sm:text-xl flex items-center text-md"
+              className="mt-8 sm:text-xl flex items-center text-base"
               Icon={MoveRight}
               sizeIcon={30}
             >

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Header.module.scss";
+
 import Navigation from "./navigation/Navigation";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className="flex items-center gap-10 px-8 py-4 bg-primaryLight text-white">
       <Navigation />
     </header>
   );

@@ -13,7 +13,7 @@ const Rating: FC<IRatingProps> = ({ rating, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="group flex gap-1 items-center text-lg text-grayDark cursor-pointer"
+      className="group flex gap-1 items-center text-base text-grayDark cursor-pointer"
     >
       {rating.voted > 0 ? (
         <>
@@ -22,19 +22,18 @@ const Rating: FC<IRatingProps> = ({ rating, onClick }) => {
               key={i}
               fill={`${rating.value >= i + 1 ? "gold" : "transparent"}`}
               strokeWidth={1}
+              size={20}
             />
           ))}
           <div className="ml-1">
             <span>{rating.value}</span>
             <span className="ml-2 group-hover:text-blue-600">
-              ({rating.voted}) vote
+              ({rating.voted})
             </span>
           </div>
         </>
       ) : (
-        <span className=" group-hover:text-blue-600">
-          Leave your first review!
-        </span>
+        <span className=" group-hover:text-blue-600">Leave first review!</span>
       )}
     </div>
   );

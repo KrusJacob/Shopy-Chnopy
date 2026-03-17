@@ -24,11 +24,11 @@ const PaymentModal = ({
   return (
     <div
       onClick={onCloseModal}
-      className="fixed h-screen inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50 "
+      className="fixed h-screen inset-0 bg-black/75 flex justify-center items-center z-50 "
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[500px] w-[500px] mx-1 border-2 border-primaryLight bg-cyan-100 md:p-8 p-2 relative flex flex-col justify-center rounded "
+        className="max-w-125 w-125 mx-1 border-2 border-primaryLight bg-cyan-100 md:p-8 p-2 relative flex flex-col justify-center rounded "
       >
         <div className="my-5">
           <div className="md:text-lg sm:text-base text-sm my-2">
